@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "project_themes": [
+    {
+      "id": "retrofit",
+      "label_en": "Retrofit",
+      "label_ko": "그린리모델링"
+    },
+    {
+      "id": "building-energy-assessment",
+      "label_en": "Building Energy Assessment",
+      "label_ko": "건물에너지 평가"
+    },
+    {
+      "id": "hvac-modeling-control",
+      "label_en": "HVAC Modeling and Control",
+      "label_ko": "HVAC 모델링 및 제어"
+    },
+    {
+      "id": "daylighting-lighting-control",
+      "label_en": "Daylighting and Lighting Control",
+      "label_ko": "자연채광 및 조명제어"
+    }
+  ],
+  "project_theme_fallback": {
+    "label_en": "Other",
+    "label_ko": "기타"
+  },
+  "publication_topics": [
+    {
+      "id": "retrofit",
+      "label_en": "Retrofit",
+      "label_ko": "리모델링"
+    },
+    {
+      "id": "hvac-modeling-control",
+      "label_en": "HVAC Modeling and Control",
+      "label_ko": "HVAC 모델링 및 제어"
+    },
+    {
+      "id": "daylighting-lighting-control",
+      "label_en": "Daylighting and Lighting Control",
+      "label_ko": "자연채광 및 조명제어"
+    }
+  ],
+  "publication_topic_fallback": {
+    "label_en": "Other",
+    "label_ko": "기타"
+  }
+}

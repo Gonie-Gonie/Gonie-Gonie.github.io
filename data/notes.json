@@ -1,0 +1,64 @@
+[
+  {
+    "id": "ishvac-award-note",
+    "date": "2025-12-02",
+    "title_en": "Best Paper Award at ISHVAC 2025",
+    "title_ko": "ISHVAC 2025 Best Paper Award",
+    "content_en": [
+      "The DOAS preheating-control study received the conference’s Best Paper Award."
+    ],
+    "content_ko": [
+      "DOAS 예열 제어 연구가 학회 Best Paper Award를 수상했습니다."
+    ],
+    "media": [
+      {
+        "src": "note-award.svg",
+        "caption_en": "ISHVAC 2025 Best Paper Award",
+        "caption_ko": "ISHVAC 2025 Best Paper Award 수상 기록"
+      },
+      {
+        "src": "note-award-stage.svg",
+        "caption_en": "Conference presentation and award session",
+        "caption_ko": "학술대회 발표 및 시상 세션"
+      }
+    ]
+  },
+  {
+    "id": "spreadsheet-energyplus-note",
+    "date": "2025-10-29",
+    "title_en": "Running EnergyPlus from spreadsheet inputs",
+    "title_ko": "스프레드시트 입력으로 EnergyPlus 실행하기",
+    "content_en": [
+      "Two conference papers documented geometry- and HVAC-oriented spreadsheet inputs for reproducible simulation workflows."
+    ],
+    "content_ko": [
+      "재현 가능한 시뮬레이션을 위해 형상·HVAC 중심의 스프레드시트 입력 방식을 두 편의 학술대회 논문으로 정리했습니다."
+    ],
+    "media": [
+      {
+        "src": "note-spreadsheet.svg",
+        "caption_en": "Spreadsheet-based geometry and HVAC input workflow",
+        "caption_ko": "스프레드시트 기반 형상·HVAC 입력 워크플로"
+      }
+    ]
+  },
+  {
+    "id": "aik-award-note",
+    "date": "2024-10-25",
+    "title_en": "Best Presentation Paper Award",
+    "title_ko": "대한건축학회 우수발표논문상",
+    "content_en": [
+      "The green-remodeling reduction-factor database study received a Best Presentation Paper Award."
+    ],
+    "content_ko": [
+      "그린리모델링 감축계수 데이터베이스 연구가 우수발표논문상을 수상했습니다."
+    ],
+    "media": [
+      {
+        "src": "note-retrofit.svg",
+        "caption_en": "Awarded green-remodeling reduction-factor database study",
+        "caption_ko": "그린리모델링 감축계수 데이터베이스 연구 수상 기록"
+      }
+    ]
+  }
+]

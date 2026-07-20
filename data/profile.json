@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-07-20",
+  "identity": {
+    "name_en": "Hyeong-Gon Jo",
+    "name_ko": "조형곤",
+    "role_en": "Building energy researcher · scientific software developer",
+    "role_ko": "건물에너지 연구자 · 과학 소프트웨어 개발자",
+    "affiliation_en": "Building Simulation Lab, Seoul National University",
+    "affiliation_ko": "서울대학교 건축에너지연구실",
+    "location_en": "Building 39, Room 418, Seoul National University, 1 Gwanak-ro, Gwanak-gu, Seoul",
+    "location_ko": "서울대학교 39동 418호, 서울특별시 관악구 관악로 1"
+  },
+  "profile_card": {
+    "media": {
+      "src": "profile.jpg",
+      "type": "image"
+    },
+    "title_en": "Postdoctoral Associate",
+    "title_ko": "박사후연구원",
+    "credentials": [
+      {
+        "name_en": "Ph.D. in Engineering",
+        "name_ko": "공학박사"
+      },
+      {
+        "name_en": "Building Energy Assessor",
+        "name_ko": "건축물에너지평가사"
+      }
+    ]
+  },
+  "intro": {
+    "short_en": "I study building energy performance, green retrofit evaluation, HVAC control, and simulation methodology. I also develop small, inspectable tools that make engineering research easier to repeat and share.",
+    "short_ko": "건물에너지 성능, 그린리모델링 평가, HVAC 제어, 시뮬레이션 방법론을 연구합니다. 공학 연구를 반복·공유하기 쉽게 만드는 작고 검사 가능한 도구도 직접 개발합니다."
+  },
+  "contact": {
+    "email": "hyeonggon.jo@snu.ac.kr",
+    "github": "https://github.com/Gonie-Gonie",
+    "orcid": "https://orcid.org/0009-0004-8821-275X",
+    "scholar": "https://scholar.google.co.kr/citations?user=lqUvlaYAAAAJ&hl=ko"
+  },
+  "experience": [
+    {
+      "title_en": "Postdoctoral Researcher",
+      "title_ko": "연수연구원",
+      "institution_en": "Seoul National University R&DB Foundation",
+      "institution_ko": "서울대학교 산학협력단",
+      "period_en": "2026.05–Present",
+      "period_ko": "2026.05–현재"
+    }
+  ],
+  "education": [
+    {
+      "degree_en": "Ph.D. in Architecture and Architectural Engineering",
+      "degree_ko": "건축학과 공학박사",
+      "institution_en": "Seoul National University",
+      "institution_ko": "서울대학교",
+      "period": "2022.03–2026.02",
+      "advisor_en": "Advisor: Prof. Cheol-Soo Park",
+      "advisor_ko": "지도교수: 박철수 교수님",
+      "thesis_en": "Simplification Methods for Dynamic Simulation Tools to Support Design-Stage Decision-Making",
+      "thesis_ko": "설계단계 의사결정 지원을 위한 동적 시뮬레이션 도구 단순화 방법"
+    },
+    {
+      "degree_en": "M.S. in Architecture and Architectural Engineering",
+      "degree_ko": "건축학과 공학석사",
+      "institution_en": "Seoul National University",
+      "institution_ko": "서울대학교",
+      "period": "2020.03–2022.02",
+      "advisor_en": "Advisor: Prof. Cheol-Soo Park",
+      "advisor_ko": "지도교수: 박철수 교수님",
+      "thesis_en": "Stochastic Daylight Model and Electric Lighting Control",
+      "thesis_ko": "확률론적 주광 모델 및 전기조명 제어"
+    },
+    {
+      "degree_en": "B.S. in Architecture and Architectural Engineering",
+      "degree_ko": "건축학과 공학사",
+      "institution_en": "Seoul National University",
+      "institution_ko": "서울대학교",
+      "period": "2016.03–2020.02",
+      "advisor_en": "",
+      "advisor_ko": "",
+      "thesis_en": "",
+      "thesis_ko": ""
+    }
+  ],
+  "scholarships": [
+    {
+      "name_en": "Hanssem deView Scholarship (now Taejae Student Research Scholarship)",
+      "name_ko": "한샘드뷰장학금 (現 태재학생연구장학금)",
+      "period_en": "2020–2021 · four semesters",
+      "period_ko": "2020–2021 · 4학기",
+      "summary_en": "Selected research topics related to future cities and housing, followed by six months of research and a presentation.",
+      "summary_ko": "미래도시 및 미래주거 관련 연구주제 선정, 6개월간 연구 후 발표",
+      "details": [
+        {
+          "label_en": "Total amount",
+          "label_ko": "총액",
+          "value_en": "KRW 13,911,000",
+          "value_ko": "13,911,000원"
+        },
+        {
+          "label_en": "Research topic (2020)",
+          "label_ko": "연구주제 (2020)",
+          "value_en": "Automated building design using C-GAN artificial intelligence to achieve target energy consumption",
+          "value_ko": "C-GAN 인공지능을 이용한 목표 에너지 소비량 달성 건축물 자동설계"
+        },
+        {
+          "label_en": "Research topic (2021)",
+          "label_ko": "연구주제 (2021)",
+          "value_en": "AI-based design-automation process for maintaining a comfortable indoor lighting environment",
+          "value_ko": "쾌적한 실내 빛환경 유지를 위한 인공지능 기반 설계 자동화 프로세스 개발"
+        }
+      ]
+    }
+  ],
+  "teaching": [
+    {
+      "title_en": "Workshop in Basic Studio 3",
+      "title_ko": "기초스튜디오 3 워크숍",
+      "period": "2022–2023 Spring",
+      "detail_en": "12-hour workshop on light-environment simulation with ClimateStudio and its use in architectural design.",
+      "detail_ko": "ClimateStudio를 이용한 빛환경 시뮬레이션과 건축설계 적용을 다룬 12시간 워크숍."
+    },
+    {
+      "title_en": "Technical session in Architectural Environment Design",
+      "title_ko": "건축환경설계 기술세션",
+      "period": "2021–2023 Spring",
+      "detail_en": "21-hour technical session on Rhino3D and ClimateStudio-based light-environment analysis.",
+      "detail_ko": "Rhino3D와 ClimateStudio 기반 빛환경 분석을 다룬 21시간 기술세션."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "detail_en": "Scientific software, data processing, HVAC and simulation tooling",
+      "detail_ko": "과학 소프트웨어, 데이터 처리, HVAC·시뮬레이션 도구"
+    },
+    {
+      "name": "MATLAB",
+      "detail_en": "Data analysis, system identification, control, and machine learning",
+      "detail_ko": "데이터 분석, 시스템 식별, 제어, 기계학습"
+    },
+    {
+      "name": "EnergyPlus",
+      "detail_en": "Dynamic building-energy modeling, automation, and model abstraction",
+      "detail_ko": "동적 건물에너지 모델링, 자동화, 모델 추상화"
+    },
+    {
+      "name": "Rust / Go",
+      "detail_en": "Desktop tools, runtimes, parsers, and numerical experiments",
+      "detail_ko": "데스크톱 도구, 런타임, 파서, 수치 실험"
+    },
+    {
+      "name": "Rhino / Grasshopper",
+      "detail_en": "Parametric geometry and simulation-linked design workflows",
+      "detail_ko": "파라메트릭 형상과 시뮬레이션 연계 설계 워크플로"
+    },
+    {
+      "name": "ClimateStudio",
+      "detail_en": "Building daylighting simulation",
+      "detail_ko": "건물 주광 시뮬레이션"
+    }
+  ],
+  "certifications": [
+    {
+      "name_en": "Building Energy Assessor",
+      "name_ko": "건축물에너지평가사",
+      "issuer_en": "Korea Energy Agency",
+      "issuer_ko": "한국에너지공단",
+      "date": "2023-12-08"
+    },
+    {
+      "name_en": "Engineer HVAC and Refrigerating Machinery",
+      "name_ko": "공조냉동기계기사",
+      "issuer_en": "Human Resources Development Service of Korea",
+      "issuer_ko": "한국산업인력공단",
+      "date": "2023-06-09"
+    },
+    {
+      "name_en": "Engineer Architecture",
+      "name_ko": "건축기사",
+      "issuer_en": "Human Resources Development Service of Korea",
+      "issuer_ko": "한국산업인력공단",
+      "date": "2019-12-20"
+    }
+  ]
+}

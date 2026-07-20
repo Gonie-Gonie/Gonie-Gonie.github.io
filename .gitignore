@@ -1,0 +1,11 @@
+# Local preview / editor files
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Temporary exports
+*.tmp
+*.bak

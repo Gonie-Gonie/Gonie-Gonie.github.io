@@ -1,0 +1,169 @@
+[
+  {
+    "id": "eplussimple",
+    "name": "EPlusSimple",
+    "links": [
+      "https://github.com/snu-bslab/EPlusSimple"
+    ],
+    "summary_en": "A spreadsheet-driven EnergyPlus workflow that validates inputs, builds models, runs simulations, and returns compact result summaries. It lowers the cost of creating repeatable EnergyPlus cases without hiding the generated model.",
+    "summary_ko": "스프레드시트 입력을 검증하고 EnergyPlus 모델 생성·실행·결과 요약까지 연결하는 워크플로입니다. 생성된 모델을 숨기지 않으면서 반복 가능한 EnergyPlus 사례 구축 비용을 낮춥니다.",
+    "media": [
+      {
+        "src": "software-eplussimple.svg",
+        "caption_en": "Spreadsheet input, EnergyPlus model generation, simulation, and result delivery",
+        "caption_ko": "스프레드시트 입력부터 EnergyPlus 모델 생성·실행·결과 전달까지의 흐름"
+      },
+      {
+        "src": "project-simulator-input.svg",
+        "caption_en": "Structured spreadsheet inputs used to create repeatable simulation cases",
+        "caption_ko": "반복 가능한 시뮬레이션 사례를 생성하는 구조화된 스프레드시트 입력"
+      }
+    ],
+    "technologies": [
+      "Python",
+      "EnergyPlus",
+      "Excel"
+    ]
+  },
+  {
+    "id": "semantic-idf",
+    "name": "semantic-idf",
+    "links": [
+      "https://github.com/Gonie-Gonie/semantic-idf"
+    ],
+    "summary_en": "A desktop workbench for inspecting, diagnosing, cleaning, comparing, and converting EnergyPlus IDF and epJSON models. It makes large simulation models easier to understand before editing or running them.",
+    "summary_ko": "EnergyPlus IDF·epJSON 모델을 검사·진단·정리·비교·변환하는 데스크톱 워크벤치입니다. 대형 시뮬레이션 모델을 수정·실행하기 전에 구조와 문제를 빠르게 파악합니다.",
+    "media": [
+      {
+        "src": "software-semantic-idf.svg",
+        "caption_en": "Desktop workbench for inspecting and transforming EnergyPlus model files",
+        "caption_ko": "EnergyPlus 모델 파일을 검사하고 변환하는 데스크톱 워크벤치"
+      }
+    ],
+    "technologies": [
+      "Go",
+      "Wails",
+      "EnergyPlus"
+    ]
+  },
+  {
+    "id": "oodocs",
+    "name": "oo-docs",
+    "links": [
+      "https://github.com/Gonie-Gonie/oo-docs",
+      "https://pypi.org/project/oodocs"
+    ],
+    "summary_en": "One structured Python document tree is rendered to DOCX, PDF, and HTML with shared data, figures, citations, and layout, reducing copy-and-paste drift between reports, papers, web pages, and generated figures.",
+    "summary_ko": "하나의 구조화된 Python 문서 트리를 DOCX·PDF·HTML로 렌더링하며 데이터·그림·인용·레이아웃을 공유해 보고서·논문·웹페이지·생성 그림 사이의 복사·붙여넣기 불일치를 줄입니다.",
+    "media": [
+      {
+        "src": "software-oodocs.svg",
+        "caption_en": "One structured document tree rendered consistently to multiple output formats",
+        "caption_ko": "하나의 구조화된 문서 트리를 여러 출력 형식으로 일관되게 렌더링"
+      }
+    ],
+    "technologies": [
+      "Python",
+      "HTML"
+    ]
+  },
+  {
+    "id": "eng-lang",
+    "name": "eng-lang",
+    "links": [
+      "https://github.com/Gonie-Gonie/eng-lang"
+    ],
+    "summary_en": "An experimental engineering workflow language that preserves units, schemas, axes, provenance, and review artifacts, keeping engineering meaning explicit as calculations move from data to models, reports, and review.",
+    "summary_ko": "단위·스키마·축·출처·검토 산출물을 보존해 데이터가 모델·보고서·검토 단계로 이동해도 공학적 의미를 명시적으로 유지하는 실험적 공학 워크플로 언어입니다.",
+    "media": [
+      {
+        "src": "software-eng-lang.svg",
+        "caption_en": "Engineering workflow language with units, schemas, provenance, and review artifacts",
+        "caption_ko": "단위·스키마·출처·검토 산출물을 보존하는 공학 워크플로 언어"
+      }
+    ],
+    "technologies": [
+      "Rust"
+    ]
+  },
+  {
+    "id": "rusted-energyplus",
+    "name": "rusted-energyplus",
+    "links": [
+      "https://github.com/Gonie-Gonie/rusted-energyplus"
+    ],
+    "summary_en": "An evidence-driven Rust reimplementation experiment for selected EnergyPlus algorithms and compatibility behavior, using inspectable, testable, high-performance implementations to study simulation-engine behavior.",
+    "summary_ko": "검사·시험 가능한 고성능 구현을 통해 EnergyPlus 알고리즘과 호환 동작을 근거 중심으로 재구현하고 시뮬레이션 엔진의 동작을 연구하는 Rust 실험 프로젝트입니다.",
+    "media": [
+      {
+        "src": "software-rusted-energyplus.svg",
+        "caption_en": "Inspectable Rust implementations for studying selected EnergyPlus algorithms",
+        "caption_ko": "EnergyPlus의 일부 알고리즘을 연구하기 위한 검사 가능한 Rust 구현"
+      }
+    ],
+    "technologies": [
+      "Rust",
+      "EnergyPlus"
+    ]
+  },
+  {
+    "id": "hvac-studio",
+    "name": "hvac-studio",
+    "links": [
+      "https://github.com/Gonie-Gonie/hvac-studio"
+    ],
+    "summary_en": "A component-and-node authoring environment and runtime that connects heterogeneous building-equipment models while keeping topology, inputs, and execution inspectable.",
+    "summary_ko": "이종 건물설비 모델을 연결하면서 토폴로지·입력·실행과정을 검사 가능하게 유지하는 컴포넌트·노드 기반 저작환경과 런타임입니다.",
+    "media": [
+      {
+        "src": "software-hvac-studio.svg",
+        "caption_en": "Component-and-node authoring for interconnected building-system models",
+        "caption_ko": "상호연결 건물설비 모델을 위한 컴포넌트·노드 기반 저작환경"
+      }
+    ],
+    "technologies": [
+      "Go",
+      "Python",
+      "Wails"
+    ]
+  },
+  {
+    "id": "co2-reduction-finder",
+    "name": "co2-reduction-finder",
+    "links": [
+      "https://github.com/Gonie-Gonie/co2-reduction-finder"
+    ],
+    "summary_en": "A compact, distributable Windows desktop application that replaces a fragile spreadsheet workflow for looking up green-remodeling CO₂-reduction coefficients.",
+    "summary_ko": "취약한 스프레드시트 기반 그린리모델링 CO₂ 감축계수 조회 과정을 배포 가능한 경량 Windows 데스크톱 애플리케이션으로 대체합니다.",
+    "media": [
+      {
+        "src": "software-co2-reduction-finder.svg",
+        "caption_en": "Desktop lookup workflow for green-remodeling CO₂-reduction coefficients",
+        "caption_ko": "그린리모델링 CO₂ 감축계수를 조회하는 데스크톱 워크플로"
+      }
+    ],
+    "technologies": [
+      "Rust",
+      "egui"
+    ]
+  },
+  {
+    "id": "snu-thesis-template",
+    "name": "SNUDAAE-LATEX-THESIS",
+    "links": [
+      "https://github.com/Gonie-Gonie/SNUDAAE-LATEX-THESIS"
+    ],
+    "summary_en": "A reusable LaTeX document build that implements department-specific requirements for doctoral theses in Architecture and Architectural Engineering at SNU.",
+    "summary_ko": "서울대학교 건축학과 박사학위논문의 학과별 형식요건을 재사용 가능한 문서 빌드로 구현한 LaTeX 템플릿입니다.",
+    "media": [
+      {
+        "src": "software-thesis-template.svg",
+        "caption_en": "Reusable LaTeX document build for department-specific doctoral-thesis requirements",
+        "caption_ko": "학과별 박사학위논문 형식요건을 구현한 재사용 가능한 LaTeX 문서 빌드"
+      }
+    ],
+    "technologies": [
+      "LaTeX"
+    ]
+  }
+]

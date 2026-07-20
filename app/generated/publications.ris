@@ -1,0 +1,900 @@
+TY  - JOUR
+TI  - From Single Archetype to Multi-Sample Approach for Stock-Level Retrofit Predictions
+AU  - Jo, H. G.
+AU  - Lee, S. J.
+AU  - Park, C. S.
+PY  - under review
+AB  - It remains questionable whether a single archetype possesses sufficient representativeness of actual building stock and fully captures the diversity of the building population. This is particularly relevant when quantifying the impact of energy conservation measures (ECMs) for large-scale energy retrofits by policymakers. This study examined this limitation using detailed EnergyPlus models of 362 real-world healthcare buildings and proposed a multi-sample approach for seven ECM scenarios. It was found that any archetype building is not likely to reproduce the effects of stock-level retrofit across all ECMs. The potential of the multi-sample approach was also evaluated using sampled building subsets of different sizes, and substantial improvement was observed with as few as three buildings. These findings suggest that rather than the precise definition of a single archetype, the key issue for retrofit-oriented building energy modeling is the use of a small set of sampled buildings that preserve within-stock variation.
+KW  - archetype
+KW  - multi-sample
+KW  - retrofit
+KW  - energy conservation measure
+KW  - wisdom of crowds
+ER  -
+
+TY  - JOUR
+TI  - Measured vs. Simulated post-retrofit energy-use in 149 public buildings using dynamic simulation
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Yoo, Y. S.
+AU  - Park, C. S.
+PY  - under review
+AB  - Dynamic building energy simulation is widely used to examine “what-if” questions about how changes in building envelopes and systems affect energy use, particularly in retrofit evaluation. Yet measured energy-use changes in real buildings are shaped by both physical changes and uncertainties that are not fully represented in simulation models, making it unclear how simulation-based “what-if” results should be understood when measured–simulated discrepancies exist. Despite this limitation, the usefulness of simulation has predominantly been discussed in terms of its agreement with measured energy use at the individual-building level, while its explanatory value for what-if changes under real-world conditions has received less attention. In this study, this issue was evaluated by comparing measured data and EnergyPlus results for 149 retrofitted public non-residential buildings in South Korea, including daycare and healthcare buildings. Before- and after-retrofit EnergyPlus models were developed by integrating drawings, specifications, surveys, site-visit records, the Korean building energy code, and actual weather data. The simulation results were then compared with measured data in terms of energy use and before–after changes at the individual-building level, by energy conservation measure (ECM)-combination groups, and at the building-stock level. Results show that discrepancies between measured and simulated energy use were substantial at the individual-building level, whereas measured and simulated post-retrofit energy-use changes were similar at the building-stock level, both annually and monthly. This contrast was particularly evident for healthcare buildings, where the measured–simulated discrepancies in absolute annual energy use were 1,559.3 MWh/yr before retrofit and 1,346.0 MWh/yr after retrofit, whereas the discrepancy in annual energy savings was substantially smaller, at 213.3 MWh/yr. These findings suggest that before–after differencing and stock-level aggregation can help reduce the influence of building-specific deviations, allowing dynamic simulation to serve as a useful interpretive framework for understanding retrofit-induced energy-use changes in real buildings. Such an interpretation can extend the role of dynamic simulation in stock-level retrofit evaluation and decision-making under real-world uncertainty, particularly for policymakers and retrofit decision-makers, even when discrepancies remain for individual buildings.
+KW  - bbuilding energy simulation
+KW  - dynamic simulation
+KW  - energy retrofit
+KW  - energy use
+KW  - performance gap
+ER  -
+
+TY  - JOUR
+TI  - Implications of geometry simplification in dynamic building energy modeling: Comparative analysis of detailed and simplified geometries
+AU  - Park, C. H.
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2026
+JO  - Energy and Buildings, Vol. 368, 117839.
+DO  - 10.1016/j.enbuild.2026.117839
+UR  - https://www.sciencedirect.com/science/article/pii/S0378778826008996
+AB  - Geometry modeling remains one of the major hurdles in dynamic building energy modeling. In this study, the implications of geometry simplification are evaluated by comparing detailed geometry (DG) and simplified geometry (SG) frameworks. Three case studies were conducted to represent various building geometries and configurations, and discrepancies between DG and SG were quantified. Results show that the discrepancies are primarily confined to zone-level loads, while impacts at the whole-building level remain limited (CVRMSE ≤6.5%), even in extreme cases involving multistory buildings with pronounced concave geometries. Analysis of 5,346 models based on real-world office buildings in Seoul, South Korea further indicates that most building shapes are minimally affected by self-shading, with over 99% exhibiting CVRMSE below 10%. These findings suggest that SG offers a practical and efficient alternative to geometry modeling without a significant loss in accuracy.
+KW  - simplified geometry
+KW  - detailed geometry
+KW  - dynamic building energy modeling
+KW  - geographic information system (gis)
+ER  -
+
+TY  - CPAPER
+TI  - 동적 건물 에너지 시뮬레이션을 활용한 그린리모델링 효과의 정량적 분석
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Mun, H. J.
+AU  - Kim, S. H.
+AU  - Park, J. I.
+AU  - Park, C. S.
+PY  - 2026
+T2  - Proceedings of the Spring Conference of the Architectural Institute of Korea, Vol. 46, No. 1, pp. 507-508. April 28-30, 2026, aT Center, Seoul.
+ER  -
+
+TY  - CPAPER
+TI  - Generalizable chiller model via domain-invariant representation learning: a real-life case study
+AU  - Kim, J. H.
+AU  - Jo, H. G.
+AU  - Mun, J. Y.
+AU  - Park, C. S.
+PY  - 2026
+T2  - Proceedings of the 2026 ASHRAE Winter Conference, January 31-February 4, 2026, Las Vegas, USA.
+DO  - 10.63044/w26kimA07
+UR  - https://store.accuristech.com/standards/a007-generalizable-chiller-model-via-domain-invariant-representation-learning-a-real-life-case-study?product_id=3066255
+AB  - Data-driven models have faced a challenge of ensuring extrapolation ability to reduce their dependence on data. Although transfer learning can leverage knowledge from other domains, it may not fully capture dynamic characteristics of the target system because knowledge transfer is one-way. This study proposes a generalizable chiller modeling approach using domain-invariant representation learning for real-world chiller systems. Measured data from two heterogeneous chillers were collected over approximately four years. The domain-invariant model demonstrated superior performance for both accuracy and extrapolation ability through bidirectional data sharing across heterogeneous chillers.
+ER  -
+
+TY  - JOUR
+TI  - Causality-driven, interpretable surrogate modeling for DOAS preheating control
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Mun, J. H.
+AU  - Park, Y. S.
+PY  - 2026
+JO  - Energy and Buildings, Vol. 350, 116625.
+DO  - 10.1016/j.enbuild.2025.116625
+UR  - https://www.sciencedirect.com/science/article/pii/S0378778825013556
+AB  - Dedicated outdoor air systems (DOAS) that supply 100% outdoor air require reliable, model-based preheating control to prevent freezing and reduce energy consumption. This study introduces a causality-driven surrogate model, or a linear double machine learning simulator, for the preheating coil in a DOAS. A calibrated, high-fidelity physics-based simulator generated the training data. The resulting surrogate achieved predictive accuracy comparable to the full simulator while producing interpretable coefficients that describe the context-dependent causal impact of valve opening. This combination of predictive fidelity and causal interpretability enables efficient real-time optimization of preheating control.
+KW  - causal inference
+KW  - dedicated outdoor air system (doas)
+KW  - double machine learning (dml)
+KW  - heating control
+KW  - interpretable model
+KW  - preheating coil
+KW  - real-world building data
+KW  - surrogate modeling
+ER  -
+
+TY  - CPAPER
+TI  - Causal analysis of energy retrofit for real-life cases using Average Treatment Effect
+AU  - Lee, S. J.
+AU  - Park, C. H.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the 14th International Symposium on Heating, Ventilating, and Air-Conditioning (ISHVAC), November 29-December 2, 2025, Tokyo, Japan.
+ER  -
+
+TY  - CPAPER
+TI  - Causality-driven, interpretable surrogate modelling for DOAS preheating control
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Mun, J. H.
+AU  - Park, Y. S.
+PY  - 2025
+T2  - Proceedings of the 14th International Symposium on Heating, Ventilating, and Air-Conditioning (ISHVAC), November 29-December 2, 2025, Tokyo, Japan.
+ER  -
+
+TY  - CPAPER
+TI  - 그린 리모델링 효과의 인과 분석: 210개 공공건물의 4가지 요소기술에 대한 사후 평가
+AU  - Lee, S. J.
+AU  - Park, C. H.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 188-189. November 14, 2025, Chungbuk National University, Cheongju.
+UR  - https://www.auric.or.kr/user/rdoc/DocRdoc.aspx?dn=449389&returnVal=RD_R
+ER  -
+
+TY  - CPAPER
+TI  - 기상데이터 유형 및 운영 불확실성에 따른 건물 에너지 사용량 분석
+AU  - Mun, H. J.
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 229-230. November 14, 2025, Chungbuk National University, Cheongju.
+UR  - https://www.auric.or.kr/User/Rdoc/DocRdoc.aspx?dn=449409&returnVal=RD_R
+ER  -
+
+TY  - CPAPER
+TI  - 난방 코일 모델의 인과구조를 고려한 불확실성의 전파
+AU  - Jeong, Y. J.
+AU  - Jo, H. G.
+AU  - Mun, J. Y.
+AU  - Park, C. S.
+AU  - Mun, J. H.
+AU  - Park, Y. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 220-221. November 14, 2025, Chungbuk National University, Cheongju.
+UR  - https://www.auric.or.kr/User/Rdoc/DocRdoc.aspx?dn=449405&returnVal=RD_R
+ER  -
+
+TY  - CPAPER
+TI  - 확률적 모델을 활용한 외기조화기 동파방지 제어
+AU  - Jeong, Y. J.
+AU  - Jo, H. G.
+AU  - Mun, J. Y.
+AU  - Park, C. S.
+AU  - Mun, J. H.
+AU  - Park, Y. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 218-219. November 14, 2025, Chungbuk National University, Cheongju.
+UR  - https://www.auric.or.kr/User/Rdoc/DocRdoc.aspx?dn=449404&returnVal=RD_R
+ER  -
+
+TY  - JOUR
+TI  - Domain-invariant representation learning for generalizable chiller model: a real-world case study
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Mun, J. Y.
+AU  - Park, C. S.
+PY  - 2025
+JO  - Energy and Buildings, Vol. 346, 116168.
+DO  - 10.1016/j.enbuild.2025.116168
+UR  - https://www.sciencedirect.com/science/article/pii/S0378778825008989
+AB  - Data-driven models are easy to develop and can be accurate, but their performance can deteriorate on unseen and imbalanced datasets. This study proposes a Domain-Invariant Representation Learning (DIRL) chiller model that uses a bidirectional learning framework and shared hidden layers for two real-life chillers. Five modeling approaches were compared for accuracy and extrapolation ability. The DIRL model achieved the best extrapolation performance and maintained consistent predictive performance by learning general chiller knowledge from combined datasets through a shared feature extractor.
+KW  - chiller
+KW  - domain-invariant representation learning
+KW  - transfer learning
+KW  - data-driven
+KW  - accuracy
+KW  - extrapolation ability
+KW  - bidirectional learning
+KW  - unidirectional learning
+ER  -
+
+TY  - CPAPER
+TI  - 그린리모델링 수준에 따른 건물 에너지 사용량 불확실성 분석
+AU  - Mun, H. J.
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Park, C. H.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 45, No. 2, pp. 524-525. October 29-31, 2025, Science and Technology Convention Center, Seoul.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12489192
+KW  - uncertainty analysis (ua)
+KW  - dynamic simulation
+KW  - retrofit
+KW  - stochastic approach
+ER  -
+
+TY  - CPAPER
+TI  - 스프레드시트 입력을 이용한 EnergyPlus 구동: 형상정보를 중심으로
+AU  - Jo, H. G.
+AU  - Park, C. H.
+AU  - Lee, S. J.
+AU  - Mun, H. J.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 45, No. 2, pp. 574-575. October 29-31, 2025, Science and Technology Convention Center, Seoul.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12489216
+KW  - dynamic simulation
+KW  - spreadsheet
+KW  - geometry modeling
+ER  -
+
+TY  - CPAPER
+TI  - 스프레드시트를 이용한 동적 시뮬레이션 구현
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Park, C. H.
+AU  - Mun, H. J.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 45, No. 2, pp. 572-573. October 29-31, 2025, Science and Technology Convention Center, Seoul.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12489215
+KW  - graphic user interface
+KW  - dynamic simulation
+KW  - spreadsheet
+ER  -
+
+TY  - CPAPER
+TI  - 스프레드시트를 입력으로 이용한 EnergyPlus 구동: 설비를 중심으로
+AU  - Jo, H. G.
+AU  - Lee, S. J.
+AU  - Park, C. H.
+AU  - Mun, H. J.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 45, No. 2, pp. 576-577. October 29-31, 2025, Science and Technology Convention Center, Seoul.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12489217
+KW  - dynamic simulation
+KW  - spreadsheet
+KW  - hvac system modeling
+ER  -
+
+TY  - JOUR
+TI  - Real-time model predictive control of energy recovery ventilators for a school building
+AU  - Ra, S. J.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2025
+JO  - Science and Technology for the Built Environment, Vol. 31, No. 9, pp. 1155-1166.
+DO  - 10.1080/23744731.2025.2539048
+UR  - https://www.tandfonline.com/doi/full/10.1080/23744731.2025.2539048
+AB  - This article presents model predictive control of energy recovery ventilators for maintaining required PM2.5, PM10, and CO2 levels in a real-life preschool classroom while minimizing ventilator energy use. An artificial neural network model predicts time-varying pollutant concentrations, and a stochastic occupancy model predicts classroom occupancy. The real-time controller improved compliance with indoor concentration requirements and reduced energy use by 6.5% during the validation period.
+ER  -
+
+TY  - CPAPER
+TI  - 도메인 불변 표현 학습을 이용한 연합 냉동기 모델 개발
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Mun, J. Y.
+AU  - Mun, J. H.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Spring Conference of the Architectural Institute of Korea, Vol. 45, No. 1. April 23-25, 2025, Global Engineering Education Center Convention, Seoul.
+ER  -
+
+TY  - CPAPER
+TI  - 인과적 지식 전이를 통한 외기 전담 공조기 모델 개발
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Mun, J. H.
+AU  - Park, C. S.
+PY  - 2025
+T2  - Proceedings of the Spring Conference of the Architectural Institute of Korea, Vol. 45, No. 1, pp. 337-338. April 23-25, 2025, Global Engineering Education Center Convention, Seoul.
+ER  -
+
+TY  - JOUR
+TI  - Accuracy, generalizability, and extrapolation ability of physics-based, data-driven, and hybrid models for real-life cooling towers
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Urabe, E.
+AU  - Mun, J. H.
+AU  - Shin, Y. K.
+AU  - Park, Y. S.
+AU  - Park, C. S.
+PY  - 2025
+JO  - Building and Environment, Vol. 274, 112756.
+DO  - 10.1016/j.buildenv.2025.112756
+UR  - https://www.sciencedirect.com/science/article/pii/S0360132325002380
+AB  - This study compares five simulation models of real-life cooling towers in terms of accuracy, generalizability, and extrapolation ability: physics-based, data-driven, physics-informed hybrid, physics-guided hybrid, and transfer-learning hybrid models. Data were collected from the target cooling towers for approximately three years. The data-driven and hybrid models produced good predictive accuracy, while performance declined when models were transferred to a nearby identical system. Only the physics-based and transfer-learning hybrid models maintained physical consistency beyond the training data, and the transfer-learning hybrid performed best overall.
+KW  - cooling tower prediction
+KW  - extrapolation
+KW  - generalizability
+KW  - hybrid model
+KW  - physics-based model
+KW  - transfer learning
+ER  -
+
+TY  - JOUR
+TI  - Toward scalable prediction of indoor thermal dynamics: Neural-network-implanted state-space (NNiSS) model
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2025
+JO  - Energy and Buildings, Vol. 331, 115359.
+DO  - 10.1016/j.enbuild.2025.115359
+UR  - https://www.sciencedirect.com/science/article/pii/S0378778825000891
+AB  - Scalability of data-driven dynamic models is a major challenge for practical model predictive control in buildings. This study develops a physics-informed, neural-network-implanted state-space (NNiSS) model to predict indoor, heat-pump return, and heat-pump supply air temperatures. The NNiSS model was compared with three conventional neural-network structures with different levels of dynamic interconnection. It consistently outperformed the alternatives when predicting beyond the trained inputs, showing that bidirectional propagation of physical relationships can improve model scalability for intelligent-building control.
+KW  - correlation
+KW  - extrapolation
+KW  - heat pump
+KW  - mpc
+KW  - physics-informed neural network
+KW  - scalability
+ER  -
+
+TY  - CPAPER
+TI  - Enhancing Scalability of Neural Networks for MPC by Interconnecting Building Dynamics
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Cho, S. K.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the 5th Asia Conference of International Building Performance Simulation Association 2024, December 8-10, 2024, Osaka, Japan.
+ER  -
+
+TY  - CPAPER
+TI  - GIS를 이용한 서울지역 업무시설 형상 입력 단순화의 영향력 분석
+AU  - Park, C. H.
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 108-109. November 14-16, 2024, Jeju National University, Jeju.
+ER  -
+
+TY  - CPAPER
+TI  - 기술 경제성 평가를 활용한 그린리모델링 요소기술의 최적화
+AU  - Kwon, S. O.
+AU  - Jo, H. G.
+AU  - Lee, S. J.
+AU  - Park, S. H.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 140-141. November 14-16, 2024, Jeju National University, Jeju.
+UR  - https://www.auric.or.kr/user/rdoc/DocRdoc.aspx?dn=434716&returnVal=RD_R
+ER  -
+
+TY  - CPAPER
+TI  - 동절기 동파 방지 외기 조화기 시스템의 최적 제어
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+AU  - Mun, J. H.
+AU  - Park, Y. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 176-177. November 14-16, 2024, Jeju National University, Jeju.
+ER  -
+
+TY  - CPAPER
+TI  - 하이브리드 모델 기반의 냉동기 이상 검출 방법
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Jo, H. G.
+AU  - Mun, J. Y.
+AU  - Park, C. S.
+AU  - Mun, J. H.
+AU  - Park, Y. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 152-153. November 14-16, 2024, Jeju National University, Jeju.
+ER  -
+
+TY  - CPAPER
+TI  - Optimal Control Strategies for Multiple Chillers in a Building
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Mun, J. H.
+AU  - Shin, Y. K.
+AU  - Park, Y. S.
+PY  - 2024
+T2  - Proceedings of the International Conference on Smart and Sustainable Built Environment (SASBE 2024), Lecture Notes in Civil Engineering, Vol. 591, pp. 1217-1224. November 7-9, 2024, Auckland, New Zealand.
+DO  - 10.1007/978-981-96-4051-5_116
+UR  - https://doi.org/10.1007/978-981-96-4051-5_116
+KW  - cooling system
+KW  - optimal control strategies
+KW  - physics-informed data-driven model
+KW  - gaussian process
+KW  - time-varying cop
+ER  -
+
+TY  - CPAPER
+TI  - Optimal Control Strategies of a Heat Recovery System for a Building
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Mun, J. H.
+AU  - Shin, Y. K.
+AU  - Park, Y. S.
+PY  - 2024
+T2  - Proceedings of the International Conference on Smart and Sustainable Built Environment (SASBE 2024), Lecture Notes in Civil Engineering, Vol. 591, pp. 1225-1231. November 7-9, 2024, Auckland, New Zealand.
+DO  - 10.1007/978-981-96-4051-5_117
+UR  - https://doi.org/10.1007/978-981-96-4051-5_117
+ER  -
+
+TY  - CPAPER
+TI  - Comparison of simplified and detailed geometry building energy models - Focused on shading effect -
+AU  - Lee, S. J.
+AU  - Park, C. H.
+AU  - Jo, H. G.
+AU  - Yoo, Y. S.
+AU  - Kim, S. H.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 44, No. 2, pp. 636-637. October 23-25, 2024, The-K Hotel Gyeongju, Gyeongju, Gyeongsangbuk-do.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12002896
+KW  - building energy model
+KW  - simplified geometry
+KW  - detailed geometry
+KW  - simplified building performance rating method (s-bpm)
+ER  -
+
+TY  - CPAPER
+TI  - 그린리모델링 사업의 정책적 의사결정을 위한 온실가스 감축계수 DB 구축 및 활용 방안
+AU  - Jo, H. G.
+AU  - Kwon, S. O.
+AU  - Kim, U. H.
+AU  - Yoo, Y. S.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 44, No. 2, pp. 501-502. October 23-25, 2024, The-K Hotel Gyeongju, Gyeongju, Gyeongsangbuk-do.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12002835
+KW  - retrofit
+KW  - dynamic simulation
+KW  - uncertainty
+KW  - greenhouse gas
+KW  - nationally determined contributions
+ER  -
+
+TY  - CPAPER
+TI  - 그린리모델링을 위한 건물에너지 감축량의 불확실성 분석
+AU  - Kwon, S. O.
+AU  - Jo, H. G.
+AU  - Yoo, Y. S.
+AU  - Kim, U. H.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 44, No. 2, pp. 493-494. October 23-25, 2024, The-K Hotel Gyeongju, Gyeongju, Gyeongsangbuk-do.
+UR  - https://www.auric.or.kr/User/Rdoc/DocRdoc.aspx?dn=433085&returnVal=RD_R
+ER  -
+
+TY  - CPAPER
+TI  - 동적 건물 에너지 모델의 형상 입력 단순화 방법 비교
+AU  - Park, C. H.
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Yoo, Y. S.
+AU  - Kim, S. H.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 44, No. 2, pp. 634-635. October 23-25, 2024, The-K Hotel Gyeongju, Gyeongju, Gyeongsangbuk-do.
+ER  -
+
+TY  - CPAPER
+TI  - 동적 상호연결을 통한 물리 지식 신경망 제어 모델의 확장성 향상
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 44, No. 2, pp. 513-514. October 23-25, 2024, The-K Hotel Gyeongju, Gyeongju, Gyeongsangbuk-do.
+ER  -
+
+TY  - CPAPER
+TI  - 외기 조화기 시스템의 난방 코일 제어 최적화
+AU  - Mun, J. Y.
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+AU  - Mun, J. H.
+AU  - Park, Y. S.
+PY  - 2024
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 44, No. 2, pp. 482-483. October 23-25, 2024, The-K Hotel Gyeongju, Gyeongju, Gyeongsangbuk-do.
+ER  -
+
+TY  - CPAPER
+TI  - Model predictive control for large-scale cooling tower system using transfer learning model
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Mun, J. H.
+AU  - Gwak, J. H.
+AU  - Shin, Y. K.
+AU  - Park, Y. S.
+PY  - 2024
+T2  - Proceedings of the 2024 ACEEE Summer Study on Energy Efficiency in Buildings, August 4-9, 2024, Pacific Grove, CA, USA.
+UR  - https://www.aceee.org/sites/default/files/proceedings/ssb24/assets/attachments/20240722163104047_eeb7bee9-9286-41f2-b7cf-c9b68931501a.pdf
+ER  -
+
+TY  - CPAPER
+TI  - 전이학습을 이용한 냉각탑의 하이브리드 모델링
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Mun, J. H.
+AU  - Gwak, J. H.
+AU  - Shin, Y. K.
+AU  - Park, Y. S.
+PY  - 2024
+T2  - Proceedings of the Spring Joint Conference of the Korean Operations Research and Management Science Society, Korean Institute of Industrial Engineers, and Korea Society for Simulation. May 2-4, 2024, Yeosu Expo Convention Center, Yeosu.
+ER  -
+
+TY  - JOUR
+TI  - Issues and Recommendations for Quasi Steady-State Building Energy Analysis: Focusing on a Domestic Building Energy Efficiency Rating Program (ECO2)
+AU  - Lee, S. J.
+AU  - Jo, H. G.
+AU  - Yoo, Y. S.
+AU  - Park, C. H.
+AU  - Park, C. S.
+PY  - 2024
+JO  - Journal of the Architectural Institute of Korea, Vol. 40, No. 1, pp. 169-176.
+DO  - 10.5659/JAIK.2024.40.1.169
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11698671
+AB  - Building energy analysis can be categorized into steady-state, quasi-steady-state, and dynamic methods. Korean building energy standards rely on ECO2, which is based on a quasi-steady-state approach and accepts deterministic inputs and predefined usage profiles. This paper examines technical disadvantages of ECO2, including unrealistic geometry and HVAC modeling, non-adjustable default inputs, insufficient validation, lack of stochastic characteristics, and limited usefulness for energy-conscious decision making, and proposes recommendations for Korean building energy standards.
+KW  - building energy standards
+KW  - quasi steady-state
+KW  - performance
+KW  - eco2
+KW  - iso 13790
+KW  - din v 18599
+ER  -
+
+TY  - CPAPER
+TI  - Implementation of real-time model predictive control (MPC) of energy recovery ventilators for school buildings
+AU  - Ra, S. J.
+AU  - Jo, H. G.
+AU  - Jeong, H.
+AU  - Heo, T. W.
+AU  - Park, C. S.
+PY  - 2023
+T2  - Proceedings of the 18th IBPSA Conference, September 4-6, 2023, Shanghai, China, pp. 3768-3775.
+DO  - 10.26868/25222708.2023.1692
+UR  - https://publications.ibpsa.org/conference/paper/?id=bs2023_1692
+AB  - This paper presents predictive control of indoor PM2.5, PM10, and CO2 in a preschool classroom and an elementary-school gym using a lumped model, an artificial neural network, and a stochastic occupancy model. Models were trained with indoor and outdoor sensor data, ventilator status, and CCTV-derived occupancy. The neural-network controller achieved the highest rate of compliance with indoor-environment criteria in both spaces.
+KW  - model predictive control
+KW  - indoor environment
+KW  - school building
+KW  - occupant behavior
+ER  -
+
+TY  - CPAPER
+TI  - Integrated optimal control for cooling AHU with two different chillers
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Park, Y. S.
+AU  - Gwak, J. H.
+PY  - 2023
+T2  - Proceedings of the 18th IBPSA Conference, September 4-6, 2023, Shanghai, China, pp. 3422-3429.
+DO  - 10.26868/25222708.2023.1436
+UR  - https://publications.ibpsa.org/conference/paper/?id=bs2023_1436
+AB  - This study presents optimal control of a heterogeneous cooling system based on overall system performance. Physics-based component models for two chillers, a cooling tower, two pumps, and two coils were developed and integrated. Applying the integrated model to two days of optimal control reduced energy use by 6.6%.
+KW  - air handling unit
+KW  - chiller
+KW  - cop
+KW  - coil
+KW  - cooling
+ER  -
+
+TY  - CPAPER
+TI  - Optimizing technology of chilled water system simulator for an industrial plant FAB (Fabrication)
+AU  - Urabe, E.
+AU  - Park, Y. S.
+AU  - Gwak, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+PY  - 2023
+T2  - Proceedings of the 18th IBPSA Conference, September 4-6, 2023, Shanghai, China, pp. 3125-3131.
+DO  - 10.26868/25222708.2023.1206
+UR  - https://publications.ibpsa.org/conference/paper/?id=bs2023_1206
+AB  - Chilled-water systems account for a large share of energy use in industrial fabrication plants and involve many interdependent operating parameters. This study modeled the system components and their relationships and applied mathematical optimization to the integrated system. The optimization indicated that chiller-system energy consumption could be reduced by 10–20%.
+KW  - chiller
+KW  - cooling tower
+KW  - energy
+KW  - optimization
+ER  -
+
+TY  - CPAPER
+TI  - Local vs. integrated control of a cooling system in a factory building
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+AU  - Urabe, E.
+AU  - Gwak, J. H.
+AU  - Park, Y. S.
+PY  - 2023
+T2  - Proceedings of the 2023 ASHRAE Annual Conference, June 24-28, 2023, Tampa, USA.
+DO  - 10.63044/s23kim85
+UR  - https://doi.org/10.63044/s23kim85
+ER  -
+
+TY  - JOUR
+TI  - Linear regression based indoor daylight illuminance estimation with simple measurements for daylight-linked lighting control
+AU  - Jo, H. G.
+AU  - Choi, S. H.
+AU  - Park, C. S.
+PY  - 2023
+JO  - Journal of Building Performance Simulation, Vol. 16, No. 5, pp. 574-587.
+DO  - 10.1080/19401493.2023.2185684
+UR  - https://www.tandfonline.com/doi/full/10.1080/19401493.2023.2185684
+AB  - Accurate prediction of indoor daylight illuminance is crucial for daylight-based lighting controls. However, determining the illuminance using physics-based simulation tools requires significant amounts of information, such as a grid of sensors, a sky model, and 3D geometry of the target building and its surroundings. This study suggests a daylight illuminance estimation method using minimal data from two reference sensors and two prior measurements. The method was validated in a large open space with north-facing skylights and achieved an 11.9% mean absolute percentage error. A reference point selection method is also presented.
+KW  - daylight
+KW  - illuminance estimation
+KW  - daylight coefficient
+KW  - lighting control
+ER  -
+
+TY  - CPAPER
+TI  - Optimal control of MAU coils in an existing building
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Urabe, E.
+AU  - Gwak, J. H.
+AU  - Park, Y. S.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the 2022 Winter Simulation Conference, December 11-14, 2022, Singapore, Singapore.
+AB  - This paper reports an optimal cooling control strategy for a makeup air unit in an existing building. A physics-based simulation model predicts supply-air temperature and humidity after two cooling coils as well as chiller cooling-energy consumption. The model is used to determine energy-efficient operation while satisfying the required supply-air conditions.
+ER  -
+
+TY  - CPAPER
+TI  - Real-time indoor daylight illuminance simulation of an existing building using minimal data
+AU  - Jo, H. G.
+AU  - Choi, S. H.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the 2022 Winter Simulation Conference, December 11-14, 2022, Singapore, Singapore.
+UR  - https://informs-sim.org/wsc22papers/pos146.pdf
+AB  - This study suggests a real-time indoor daylight simulation method using minimal data from two reference sensors and two prior measurements at target points. The minimal data substitutes for components in the daylight coefficient equation. The approach was validated with seven days of on-site measurements, achieving a 7.3% mean absolute percentage error and a 0.3% normalized mean bias error.
+ER  -
+
+TY  - CPAPER
+TI  - 재실자 예측 정보 기반 체육 시설 전열 교환 환기시스템의 실시간 모델 예측 제어
+AU  - Ra, S. J.
+AU  - Jo, H. G.
+AU  - Jeong, H.
+AU  - Heo, T. W.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 149-150. November 25, 2022, Yonsei University, Seoul.
+ER  -
+
+TY  - CPAPER
+TI  - 현장 실측 데이터를 이용한 자연채광 시뮬레이션 모델 보정 방법
+AU  - Jo, H. G.
+AU  - Choi, S. H.
+AU  - Heo, S. Y.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 119-121. November 25, 2022, Yonsei University, Seoul.
+ER  -
+
+TY  - CPAPER
+TI  - 건물의 운영 특성을 고려한 냉동기의 실질 성능 계수(net-COP) 도출 방법
+AU  - Kim, Y. S.
+AU  - Kim, J. H.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 42, No. 2, pp. 387-388. October 26-28, 2022, Phoenix Jeju Seopjikoji, Jeju.
+UR  - https://www.auric.or.kr/user/Rdoc/DocRdoc.aspx?dn=417099&returnVal=RD_R
+ER  -
+
+TY  - CPAPER
+TI  - 복수의 열원기기 동특성을 결합한 외기조화기(OAC) 시스템 냉방 최적 제어
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Gwak, J. H.
+AU  - Urabe, E.
+AU  - Park, Y. S.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 42, No. 2, pp. 352-353. October 26-28, 2022, Phoenix Jeju Seopjikoji, Jeju.
+UR  - https://www.auric.or.kr/User/Rdoc/DocRdoc.aspx?dn=417084&returnVal=RD_R
+ER  -
+
+TY  - CPAPER
+TI  - Real-time implementation of model predictive control for cooling system of a factory building
+AU  - Ra, S. J.
+AU  - Kim, J. H.
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Park, C. S.
+PY  - 2022
+T2  - ASHRAE Transactions, Vol. 128, pp. 175-182 (Proceedings of the 2022 ASHRAE Annual Conference, June 25-29, 2022, Toronto, Canada).
+UR  - https://snu.elsevierpure.com/en/publications/real-time-implementation-of-model-predictive-control-for-cooling-
+ER  -
+
+TY  - CPAPER
+TI  - Daylight coefficient 개념을 활용한 실내 자연채광 추정 모델
+AU  - Jo, H. G.
+AU  - Choi, S. H.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the Spring Conference of the Architectural Institute of Korea, Vol. 42, No. 1, pp. 399-400. April 28-29, 2022, The-K Hotel, Seoul.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11071997
+KW  - indoor daylight estimation
+KW  - linear model
+KW  - daylight coefficient
+ER  -
+
+TY  - CPAPER
+TI  - 표준기상데이터 및 실제 기상데이터를 이용한 자연채광 조도 시뮬레이션의 불확실성 분석
+AU  - Choi, S. H.
+AU  - Jo, H. G.
+AU  - Yoo, Y. S.
+AU  - Park, C. S.
+PY  - 2022
+T2  - Proceedings of the Spring Conference of the Architectural Institute of Korea, Vol. 42, No. 1, pp. 394-395. April 28-29, 2022, The-K Hotel, Seoul.
+ER  -
+
+TY  - CPAPER
+TI  - Application of daylighting Gaussian process emulator to lighting control of an existing building
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Park, C. S.
+PY  - 2021
+T2  - Proceedings of the 2021 Winter Simulation Conference, December 13-17, 2021, Phoenix, Arizona, USA.
+UR  - https://www.informs-sim.org/wsc21papers/052.pdf
+AB  - This commercial case study presents a data-driven daylight simulation model for a factory building. Using solar altitude, solar azimuth, cloud cover, and illuminance measured at a single reference point, a Gaussian process model predicts illuminance at multiple indoor points. The model achieved an average coefficient of variation of root mean square error of 20.4% and was integrated with continuous dimming control.
+ER  -
+
+TY  - JOUR
+TI  - Stochastic Daylighting Model for Predictive Control in Large Open-space Building
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Park, C. S.
+PY  - 2021
+JO  - Journal of the Architectural Institute of Korea, Vol. 37, No. 12, pp. 255-264.
+DO  - 10.5659/JAIK.2021.37.12.255
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10819108
+AB  - Development of a stochastic daylighting prediction model for a large open-space building is presented. The model uses solar altitude and azimuth, illuminance at a reference point, and cloud cover to predict daylight illuminance at sixteen workplane points. Gaussian process modeling captures the stochastic characteristics of the indoor daylight environment. The model was integrated with electric-lighting control, and eight days of validation indicated an energy saving of 12.3%.
+KW  - model uncertainty
+KW  - daylight prediction model
+KW  - electric lighting control
+KW  - gaussian process
+ER  -
+
+TY  - CPAPER
+TI  - 자연채광 모델의 불확실성을 고려한 실시간 전기조명 제어
+AU  - Jo, H. G.
+AU  - Ra, S. J.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+PY  - 2021
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 41, No. 2, pp. 332-333. October 27-30, 2021, Yeosu Expo Convention Center, Yeosu, Jeollanam-do.
+UR  - https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11024946
+KW  - electric lighting control
+KW  - model uncertainty
+KW  - indoor daylight prediction
+ER  -
+
+TY  - CPAPER
+TI  - 집중 시뮬레이션 모델을 활용한 건물의 실시간 냉방 예측 제어
+AU  - Ra, S. J.
+AU  - Kim, J. H.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Shin, H. S.
+AU  - Park, C. S.
+PY  - 2021
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 41, No. 2, pp. 323-324. October 27-30, 2021, Yeosu Expo Convention Center, Yeosu, Jeollanam-do.
+ER  -
+
+TY  - CPAPER
+TI  - 실내온도 예측을 통한 공장 건물의 실시간 난방 제어
+AU  - Ra, S. J.
+AU  - Shin, H. S.
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Kim, J. H.
+AU  - Park, C. S.
+PY  - 2021
+T2  - Proceedings of the Spring Conference of the Architectural Institute of Korea, Vol. 41, No. 1, pp. 309-310. April 21-23, 2021, International Convention Center Jeju, Seogwipo, Jeju-do.
+ER  -
+
+TY  - CPAPER
+TI  - 인공신경망을 이용한 수평면 전 일사량 예측모델
+AU  - Kim, J. H.
+AU  - Jo, H. G.
+AU  - Kim, Y. S.
+AU  - Shin, H. S.
+AU  - Park, C. S.
+PY  - 2021
+T2  - Proceedings of the Spring Conference of the Architectural Institute of Korea, Vol. 41, No. 1, pp. 288-289. April 21-23, 2021, International Convention Center Jeju, Seogwipo, Jeju-do.
+ER  -
+
+TY  - CPAPER
+TI  - Illuminance prediction using a hybrid simulation model based on a single reference measurement
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2020
+T2  - Proceedings of the 2020 Winter Simulation Conference, December 14-18, 2020, Orlando, USA. Virtual Conference.
+UR  - https://www.informs-sim.org/wsc20papers/368.pdf
+AB  - This paper proposes a method for predicting illuminance at multiple points using minimal sensing. Illuminance measured at one reference point is combined with Radiance simulation in a hybrid daylighting approach. A seven-day test in a mechanical factory building showed that the method can predict illuminance at multiple points and can support dimming control in existing buildings.
+ER  -
+
+TY  - CPAPER
+TI  - 10,750개 건물의 월별 에너지 사용의 반복성 평가
+AU  - Ko, Y. D.
+AU  - Lee, D. H.
+AU  - Yoo, Y. S.
+AU  - Jo, H. G.
+AU  - Kim, D. W.
+AU  - Park, C. S.
+PY  - 2020
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 145-146. November 19-21, 2020, Korea National University of Transportation, Chungju.
+ER  -
+
+TY  - CPAPER
+TI  - 가우시안 프로세스를 이용한 실내 지점간의 조도 비율 예측
+AU  - Jo, H. G.
+AU  - Shin, H. S.
+AU  - Kim, Y. S.
+AU  - Park, C. S.
+PY  - 2020
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 153-154. November 19-21, 2020, Korea National University of Transportation, Chungju.
+UR  - https://www.auric.or.kr/User/rdoc/DocRdoc.aspx?returnVal=RD_R&dn=400711#.YkFrsudBxpI
+ER  -
+
+TY  - CPAPER
+TI  - 지리정보시스템 기반 EnergyPlus parser 개발
+AU  - Lee, D. H.
+AU  - Ko, Y. D.
+AU  - Yoo, Y. S.
+AU  - Jo, H. G.
+AU  - Kim, D. W.
+AU  - Park, C. S.
+PY  - 2020
+T2  - Proceedings of the Fall Conference of the Korean Institute of Architectural Sustainable Environment and Building Systems, pp. 81-82. November 19-21, 2020, Korea National University of Transportation, Chungju.
+ER  -
+
+TY  - CPAPER
+TI  - DDPG 강화학습을 이용한 조명 제어
+AU  - Kim, Y. S.
+AU  - Jo, H. G.
+AU  - Shin, H. S.
+AU  - Park, C. S.
+PY  - 2020
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 40, No. 2, pp. 382-383. October 26-30, 2020, Yeosu Expo Convention Center, Yeosu. Online presentation.
+ER  -
+
+TY  - CPAPER
+TI  - 강건 회귀 및 시계열 군집 분석 기반 건물 에너지 패턴 분류
+AU  - Lee, D. H.
+AU  - Yoo, Y. S.
+AU  - Ko, Y. D.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2020
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 40, No. 2, pp. 392-393. October 26-30, 2020, Yeosu Expo Convention Center, Yeosu. Online presentation.
+ER  -
+
+TY  - CPAPER
+TI  - 데이터 기반 건물 에너지 입력 변수 역추적 방법
+AU  - Ko, Y. D.
+AU  - Lee, D. H.
+AU  - Yoo, Y. S.
+AU  - Jo, H. G.
+AU  - Park, C. S.
+PY  - 2020
+T2  - Proceedings of the Fall Conference of the Architectural Institute of Korea, Vol. 40, No. 2, pp. 384-385. October 26-30, 2020, Yeosu Expo Convention Center, Yeosu. Online presentation.
+ER  -

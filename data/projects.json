@@ -1,0 +1,179 @@
+[
+     {
+    "title_en": "Research on Energy-Efficiency Measures for Carbon-Neutral School Facilities",
+    "title_ko": "탄소중립 학교시설 에너지 효율화 방안 연구용역",
+    "start_date": "2026-07-27",
+    "end_date": "2027-07-26",
+    "theme": "retrofit",
+    "funder_en": "Gyeonggido Office of Education",
+    "funder_ko": "경기도교육청",
+    "summary_en": "Developed a prototype that converts structured, spreadsheet-oriented inputs into repeatable EnergyPlus models and retrofit scenarios.",
+    "summary_ko": "구조화된 스프레드시트 입력을 반복 가능한 EnergyPlus 모델과 리모델링 대안으로 변환하는 프로토타입을 개발했습니다.",
+    "media": []
+  },
+     {
+    "title_en": "Analysis of Green Remodeling Project Effectiveness and Development of Measures to Advance the Support Program",
+    "title_ko": "그린리모델링 사업효과 분석 및 지원사업 고도화 방안 마련",
+    "start_date": "2026-06-29",
+    "end_date": "2026-12-15",
+    "theme": "retrofit",
+    "funder_en": "Korea Authority of Land & Infrastructure Safety",
+    "funder_ko": "국토안전관리원",
+    "summary_en": "Developed a prototype that converts structured, spreadsheet-oriented inputs into repeatable EnergyPlus models and retrofit scenarios.",
+    "summary_ko": "구조화된 스프레드시트 입력을 반복 가능한 EnergyPlus 모델과 리모델링 대안으로 변환하는 프로토타입을 개발했습니다.",
+    "media": [ ]
+  },
+  {
+    "title_en": "Data Collection and Dynamic Simulation Analysis for Evaluating Green Remodeling Performance",
+    "title_ko": "그린리모델링 성과평가를 위한 데이터 수집 및 동적 시뮬레이션 분석",
+    "start_date": "2025-06-17",
+    "end_date": "2025-10-31",
+    "theme": "retrofit",
+    "funder_en": "Korea Real Estate Board",
+    "funder_ko": "한국부동산원",
+    "summary_en": "Collected operational data and used dynamic simulation to evaluate realized energy savings and performance gaps in completed retrofit projects.",
+    "summary_ko": "완료된 그린리모델링 사업의 운영 데이터를 수집하고 동적 시뮬레이션을 활용해 실현 절감량과 성능 격차를 평가했습니다.",
+    "media": [
+      {
+        "src": "project-performance-monitoring.svg",
+        "caption_en": "Measured energy use and performance comparison for green-remodeling projects",
+        "caption_ko": "그린리모델링 사업의 실측 에너지사용량 및 성능 비교"
+      },
+      {
+        "src": "project-performance-gap.svg",
+        "caption_en": "Performance-gap analysis using simulation and operational data",
+        "caption_ko": "시뮬레이션과 운영 데이터를 활용한 성능 격차 분석"
+      }
+    ]
+  },
+    {
+    "title_en": "Enhancement, Operational Management, and Wider Dissemination of an Energy and Greenhouse Gas Simulator for Existing Buildings",
+    "title_ko": "기존 건축물의 에너지·온실가스 시뮬레이터 고도화·운영관리 및 저변확산",
+    "start_date": "2026-05-19",
+    "end_date": "2027-03-31",
+    "theme": "building-energy-assessment",
+    "funder_en": "Korea Authority of Land & Infrastructure Safety",
+    "funder_ko": "국토안전관리원",
+    "summary_en": "Developed a prototype that converts structured, spreadsheet-oriented inputs into repeatable EnergyPlus models and retrofit scenarios.",
+    "summary_ko": "구조화된 스프레드시트 입력을 반복 가능한 EnergyPlus 모델과 리모델링 대안으로 변환하는 프로토타입을 개발했습니다.",
+    "media": [
+      {
+        "src": "project-simulator-input.svg",
+        "caption_en": "Spreadsheet-oriented model input workflow",
+        "caption_ko": "스프레드시트 기반 모델 입력 워크플로"
+      },
+      {
+        "src": "project-simulator-scenarios.svg",
+        "caption_en": "Repeatable EnergyPlus retrofit-scenario comparison",
+        "caption_ko": "반복 가능한 EnergyPlus 리모델링 대안 비교"
+      }
+    ]
+  },
+  {
+    "title_en": "Development of a Prototype Energy and Greenhouse Gas Simulator for Existing Buildings",
+    "title_ko": "기존 건축물 에너지·온실가스 시뮬레이터 프로토타입 개발",
+    "start_date": "2024-07-24",
+    "end_date": "2025-12-31",
+    "theme": "building-energy-assessment",
+    "funder_en": "Korea Authority of Land & Infrastructure Safety",
+    "funder_ko": "국토안전관리원",
+    "summary_en": "Developed a prototype that converts structured, spreadsheet-oriented inputs into repeatable EnergyPlus models and retrofit scenarios.",
+    "summary_ko": "구조화된 스프레드시트 입력을 반복 가능한 EnergyPlus 모델과 리모델링 대안으로 변환하는 프로토타입을 개발했습니다.",
+    "media": [
+      {
+        "src": "project-simulator-input.svg",
+        "caption_en": "Spreadsheet-oriented model input workflow",
+        "caption_ko": "스프레드시트 기반 모델 입력 워크플로"
+      },
+      {
+        "src": "project-simulator-scenarios.svg",
+        "caption_en": "Repeatable EnergyPlus retrofit-scenario comparison",
+        "caption_ko": "반복 가능한 EnergyPlus 리모델링 대안 비교"
+      }
+    ]
+  },
+  {
+    "title_en": "Advancement of Methods for Estimating Greenhouse Gas Reduction Factors and Evaluating Emissions through Remodeling",
+    "title_ko": "리모델링을 통한 온실가스 감축계수 산정 및 배출량 평가 방안 마련 고도화",
+    "start_date": "2024-03-11",
+    "end_date": "2024-12-31",
+    "theme": "retrofit",
+    "funder_en": "Korea Authority of Land & Infrastructure Safety",
+    "funder_ko": "국토안전관리원",
+    "summary_en": "Built archetype-based reduction factors and long-term emissions estimates through a large simulation campaign for aging buildings.",
+    "summary_ko": "노후 건축물 아키타입을 대상으로 대규모 시뮬레이션을 수행해 감축계수와 장기 배출량 추정체계를 구축했습니다.",
+    "media": []
+  },
+  {
+    "title_en": "Development of Methods for Estimating Greenhouse Gas Reduction Factors and Evaluating Emissions through Green Remodeling in the Building Sector",
+    "title_ko": "건물부문 그린리모델링을 통한 온실가스 감축계수 산정 및 배출량 평가 방안 마련",
+    "start_date": "2022-12-10",
+    "end_date": "2023-07-31",
+    "theme": "retrofit",
+    "funder_en": "Korea Authority of Land & Infrastructure Safety",
+    "funder_ko": "국토안전관리원",
+    "summary_en": "Built archetype-based reduction factors and long-term emissions estimates through a large simulation campaign for aging buildings.",
+    "summary_ko": "노후 건축물 아키타입을 대상으로 대규모 시뮬레이션을 수행해 감축계수와 장기 배출량 추정체계를 구축했습니다.",
+    "media": []
+  },
+  {
+    "title_en": "Development of an Integrated Energy Optimization Simulator for DS FAB UT Systems",
+    "title_ko": "DS FAB UT시스템 통합에너지 최적화 시뮬레이터 개발",
+    "start_date": "2024-05-01",
+    "end_date": "2025-03-31",
+    "theme": "hvac-modeling-control",
+    "funder_en": "Samsung C&T",
+    "funder_ko": "삼성물산",
+    "summary_en": "Developed physics-based and data-driven models for air-handling, heat-recovery, and heat-source systems, then connected them in a node-based simulator.",
+    "summary_ko": "공조기 모델링",
+    "media": []
+  },
+    {
+    "title_en": "Development of Optimization Technology for DS FAB UT Systems",
+    "title_ko": "DS FAB UT시스템 최적화 기술 개발",
+    "start_date": "2023-05-22",
+    "end_date": "2023-12-29",
+    "theme": "hvac-modeling-control",
+    "funder_en": "Samsung C&T",
+    "funder_ko": "삼성물산",
+    "summary_en": "Developed physics-based and data-driven models for air-handling, heat-recovery, and heat-source systems, then connected them in a node-based simulator.",
+    "summary_ko": "공조기 모델링",
+    "media": []
+  },
+  {
+    "title_en": "Development of a UT System Optimization Simulator",
+    "title_ko": "UT System optimizing simulator 개발",
+    "start_date": "2022-05-16",
+    "end_date": "2022-12-31",
+    "theme": "hvac-modeling-control",
+    "funder_en": "Samsung C&T",
+    "funder_ko": "삼성물산",
+    "summary_en": "Developed physics-based and data-driven models for air-handling, heat-recovery, and heat-source systems, then connected them in a node-based simulator.",
+    "summary_ko": "공조기 모델링",
+    "media": []
+  },
+  {
+    "title_en": "Establishment of a Foundation for Performance Evaluation of the Korean Building Energy-Efficiency Rating System",
+    "title_ko": "한국형 건축물 에너지효율등급 성능평가 기반구축",
+    "start_date": "2021-08-01",
+    "end_date": "2024-08-31",
+    "theme": "building-energy-assessment",
+    "funder_en": "Korea Energy Agency",
+    "funder_ko": "한국에너지공단",
+    "summary_en": "Examined floor-heating representations, ECO2 assumptions, and simplified modeling approaches for rating-oriented analysis.",
+    "summary_ko": "정적 시뮬레이션 기반 건물 에너지 평가 도구인 ECO2에서 민감도 분석 및 동적 시뮬레이션, 기계학습 방법론을 적용, 바닥난방 시스템의 평가 방법을 고도화하는 방법을 개발",
+    "media": []
+  },
+  {
+    "title_en": "Development of a LIGHT–HVAC Energy Optimization System and Business Model",
+    "title_ko": "LIGHT–HVAC 에너지최적화 시스템 및 BM 개발",
+    "start_date": "2019-01-01",
+    "end_date": "2021-08-31",
+    "theme": "daylighting-lighting-control",
+    "funder_en": "Ministry of Trade, Industry and Resources",
+    "funder_ko": "산업통상자원부",
+    "summary_en": "Developed sparse-measurement daylight models and predictive control methods, followed by demonstrations at two real sites.",
+    "summary_ko": "공장 건물에서 작업면의 자연채광 조도를 추정하는 기술을 개발, 이를 바탕으로 조명 에너지를 저감하는 최적제어 알고리즘을 개발 및 실증",
+    "media": []
+  }
+]
