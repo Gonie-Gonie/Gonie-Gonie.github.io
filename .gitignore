@@ -1,0 +1,13 @@
+# Local preview / editor files
+.vscode/*
+!.vscode/site-data.code-snippets
+!.vscode/settings.json
+.idea/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Temporary exports
+*.tmp
+*.bak

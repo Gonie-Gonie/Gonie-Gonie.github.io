@@ -1,0 +1,125 @@
+{
+  "Project item": {
+    "scope": "json,jsonc",
+    "prefix": "project",
+    "body": [
+      "{",
+      "  \"title_en\": \"$1\",",
+      "  \"title_ko\": \"$2\",",
+      "  \"start_date\": \"$3\",",
+      "  \"end_date\": \"$4\",",
+      "  \"theme\": \"$5\",",
+      "  \"funder_en\": \"$6\",",
+      "  \"funder_ko\": \"$7\",",
+      "  \"notes_en\": [",
+      "    \"$8\"",
+      "  ],",
+      "  \"notes_kr\": [",
+      "    \"$9\"",
+      "  ],",
+      "  \"media\": []",
+      "}$0"
+    ],
+    "description": "Create an empty projects.json item"
+  },
+  "Software item": {
+    "scope": "json,jsonc",
+    "prefix": "software",
+    "body": [
+      "{",
+      "  \"id\": \"$1\",",
+      "  \"name\": \"$2\",",
+      "  \"stage\": \"$3\",",
+      "  \"links\": [",
+      "    \"$4\"",
+      "  ],",
+      "  \"notes_en\": [",
+      "    \"$5\"",
+      "  ],",
+      "  \"notes_kr\": [",
+      "    \"$6\"",
+      "  ],",
+      "  \"media\": [],",
+      "  \"technologies\": [",
+      "    \"$7\"",
+      "  ]",
+      "}$0"
+    ],
+    "description": "Create an empty software.json item"
+  },
+  "Publication item": {
+    "scope": "json,jsonc",
+    "prefix": "publication",
+    "body": [
+      "{",
+      "  \"title_en\": \"$1\",",
+      "  \"title_ko\": \"$2\",",
+      "  \"abstract_en\": \"$3\",",
+      "  \"abstract_ko\": \"$4\",",
+      "  \"keywords_en\": [",
+      "    \"$5\"",
+      "  ],",
+      "  \"keywords_ko\": [",
+      "    \"$6\"",
+      "  ],",
+      "  \"author_ids\": [",
+      "    \"$7\"",
+      "  ],",
+      "  \"date\": \"$8\",",
+      "  \"venue\": \"$9\",",
+      "  \"under_review\": false,",
+      "  \"in_press\": false,",
+      "  \"publication_type\": \"${10}\",",
+      "  \"topic\": \"${11}\",",
+      "  \"award_id\": \"${12}\",",
+      "  \"doi\": \"${13}\",",
+      "  \"url\": \"${14}\",",
+      "  \"note\": \"${15}\"",
+      "}$0"
+    ],
+    "description": "Create an empty publications.json item"
+  },
+  "Award item": {
+    "scope": "json,jsonc",
+    "prefix": "award",
+    "body": [
+      "{",
+      "  \"id\": \"$1\",",
+      "  \"date\": \"$2\",",
+      "  \"title_en\": \"$3\",",
+      "  \"title_ko\": \"$4\",",
+      "  \"organization_en\": \"$5\",",
+      "  \"organization_ko\": \"$6\"",
+      "}$0"
+    ],
+    "description": "Create an empty awards.json item"
+  },
+  "Board item": {
+    "scope": "json,jsonc",
+    "prefix": "board",
+    "body": [
+      "{",
+      "  \"start_date\": \"$1\",",
+      "  \"end_date\": \"$2\",",
+      "  \"title_en\": \"$3\",",
+      "  \"title_ko\": \"$4\",",
+      "  \"content_en\": \"$5\",",
+      "  \"content_ko\": \"$6\",",
+      "  \"media\": []",
+      "}$0"
+    ],
+    "description": "Create an empty board.json item"
+  },
+  "Media item": {
+    "scope": "json,jsonc",
+    "prefix": "media",
+    "body": [
+      "{",
+      "  \"src\": \"$1\",",
+      "  \"caption_en\": \"$2\",",
+      "  \"caption_ko\": \"$3\"",
+      "}$0"
+    ],
+    "description": "Create an empty media item"
+  }
+}
