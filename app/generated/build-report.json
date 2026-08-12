@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "projects": 13,
+    "software": 8,
+    "publications": 72,
+    "people": 32,
+    "awards": 9,
+    "board": 10,
+    "academic_activities": 4
+  },
+  "publication_types": {
+    "domestic-conference": 42,
+    "domestic-journal": 2,
+    "international-conference": 15,
+    "international-journal": 13
+  }
+}
