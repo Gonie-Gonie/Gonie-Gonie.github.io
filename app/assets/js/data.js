@@ -1,0 +1,578 @@
+
+(function () {
+  "use strict";
+
+  const FILES = {
+    settings: "data/settings.json",
+    profile: "data/profile.json",
+    people: "data/people.json",
+    projects: "data/projects.json",
+    software: "data/software.json",
+    publications: "data/publications.json",
+    awards: "data/awards.json",
+    board: "data/board.json"
+  };
+  const SOFTWARE_STAGES = new Set(["release", "preview", "development"]);
+  const CANONICAL_ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+  async function fetchJSON(url) {
+    const response = await fetch(url, { cache: "no-cache" });
+    if (!response.ok) {
+      throw new Error(`Failed to load ${url}: ${response.status}`);
+    }
+    return response.json();
+  }
+
+  function isValidISODate(value) {
+    const text = String(value || "").trim();
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) return false;
+    const parsed = new Date(`${text}T00:00:00Z`);
+    return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === text;
+  }
+
+  function requireArray(value, context) {
+    if (!Array.isArray(value)) {
+      throw new Error(`${context}: must be an array.`);
+    }
+    return value;
+  }
+
+  function requireRecord(value, context) {
+    if (!value || typeof value !== "object" || Array.isArray(value)) {
+      throw new Error(`${context}: must be an object.`);
+    }
+    return value;
+  }
+
+  function requireCanonicalId(value, context) {
+    if (typeof value !== "string" || !CANONICAL_ID_PATTERN.test(value)) {
+      throw new Error(
+        `${context}: id must be a lowercase kebab-case string matching `
+        + "/^[a-z0-9]+(?:-[a-z0-9]+)*$/. Reserved sentinel values are not valid data IDs."
+      );
+    }
+    return value;
+  }
+
+  function collectUniqueIds(rows, context) {
+    const ids = new Set();
+    requireArray(rows, context).forEach((row, index) => {
+      const itemContext = `${context} item ${index + 1}`;
+      requireRecord(row, itemContext);
+      const id = requireCanonicalId(row.id, `${itemContext} id`);
+      if (ids.has(id)) {
+        throw new Error(`${itemContext}: duplicate id '${id}' in ${context}; every id must be unique.`);
+      }
+      ids.add(id);
+    });
+    return ids;
+  }
+
+  function requireKnownId(value, knownIds, context) {
+    const id = requireCanonicalId(value, context);
+    if (!knownIds.has(id)) {
+      throw new Error(`${context}: unknown id '${id}'; add it to the referenced JSON collection or correct the reference.`);
+    }
+    return id;
+  }
+
+  async function loadAll() {
+    const [settings, profile, people, projects, software, publications, awards, board] = await Promise.all([
+      fetchJSON(FILES.settings),
+      fetchJSON(FILES.profile),
+      fetchJSON(FILES.people),
+      fetchJSON(FILES.projects),
+      fetchJSON(FILES.software),
+      fetchJSON(FILES.publications),
+      fetchJSON(FILES.awards),
+      fetchJSON(FILES.board)
+    ]);
+
+    requireRecord(settings, "settings.json");
+    requireRecord(profile, "profile.json");
+    requireArray(projects, "projects.json");
+    requireArray(publications, "publications.json");
+    requireArray(board, "board.json");
+
+    const peopleIds = collectUniqueIds(people, "people.json");
+    const awardIds = collectUniqueIds(awards, "awards.json");
+    collectUniqueIds(software, "software.json");
+    const projectThemeIds = collectUniqueIds(settings.project_themes, "settings.json project_themes");
+    const publicationTopicIds = collectUniqueIds(settings.publication_topics, "settings.json publication_topics");
+
+    const peopleById = new Map(people.map((person) => [person.id, person]));
+    projects.forEach((project, index) => {
+      const context = `projects.json item ${index + 1}`;
+      requireRecord(project, context);
+      if (typeof project.theme !== "string" || !project.theme) {
+        throw new Error(`${context} theme: must be a non-empty canonical project theme id.`);
+      }
+      requireKnownId(project.theme, projectThemeIds, `${context} theme`);
+      if ("summary" in project || "summary_en" in project || "summary_ko" in project) {
+        throw new Error(`projects.json item ${index + 1}: use notes_en and notes_kr instead of summary.`);
+      }
+      ["notes_en", "notes_kr"].forEach((field) => {
+        if (
+          !Array.isArray(project[field])
+          || !project[field].length
+          || project[field].some((note) => typeof note !== "string" || !note.trim())
+        ) {
+          throw new Error(`projects.json item ${index + 1}: ${field} must be a non-empty array of non-empty strings.`);
+        }
+      });
+      if (project.notes_en.length !== project.notes_kr.length) {
+        throw new Error(`projects.json item ${index + 1}: notes_en and notes_kr must contain the same number of items.`);
+      }
+      (project.media || []).forEach((mediaItem, mediaIndex) => {
+        if ("caption_kr" in mediaItem || "caption-en" in mediaItem) {
+          throw new Error(`projects.json item ${index + 1} media ${mediaIndex + 1}: use caption_en and caption_ko.`);
+        }
+        const captionEn = String(mediaItem.caption_en || "").trim();
+        const captionKo = String(mediaItem.caption_ko || "").trim();
+        if (Boolean(captionEn) !== Boolean(captionKo)) {
+          throw new Error(`projects.json item ${index + 1} media ${mediaIndex + 1}: caption_en and caption_ko must both be filled or both be blank.`);
+        }
+      });
+    });
+    software.forEach((item, index) => {
+      requireRecord(item, `software.json item ${index + 1}`);
+      if (!SOFTWARE_STAGES.has(item.stage)) {
+        throw new Error(`software.json item ${index + 1}: stage must be release, preview, or development.`);
+      }
+      if ("summary" in item || "summary_en" in item || "summary_ko" in item) {
+        throw new Error(`software.json item ${index + 1}: use notes_en and notes_kr instead of summary.`);
+      }
+      ["notes_en", "notes_kr"].forEach((field) => {
+        if (
+          !Array.isArray(item[field])
+          || !item[field].length
+          || item[field].some((note) => typeof note !== "string" || !note.trim())
+        ) {
+          throw new Error(`software.json item ${index + 1}: ${field} must be a non-empty array of non-empty strings.`);
+        }
+      });
+      if (item.notes_en.length !== item.notes_kr.length) {
+        throw new Error(`software.json item ${index + 1}: notes_en and notes_kr must contain the same number of items.`);
+      }
+    });
+    board.forEach((item, index) => {
+      const context = `board.json item ${index + 1}`;
+      requireRecord(item, context);
+      if ("date" in item) {
+        throw new Error(`${context}: use start_date and end_date instead of date.`);
+      }
+      const startDate = String(item.start_date || "").trim();
+      const endDate = String(item.end_date || "").trim();
+      if (!isValidISODate(startDate)) {
+        throw new Error(`${context}: start_date must be a valid YYYY-MM-DD date.`);
+      }
+      if (endDate && !isValidISODate(endDate)) {
+        throw new Error(`${context}: end_date must be blank or a valid YYYY-MM-DD date.`);
+      }
+      if (endDate && startDate > endDate) {
+        throw new Error(`${context}: start_date must not be later than end_date.`);
+      }
+      ["content_en", "content_ko"].forEach((field) => {
+        if (typeof item[field] !== "string") {
+          throw new Error(`${context}: ${field} must be a string.`);
+        }
+      });
+    });
+    const resolvedPublications = publications.map((publication, publicationIndex) => {
+      const context = `publications.json item ${publicationIndex + 1}`;
+      requireRecord(publication, context);
+
+      if (!Array.isArray(publication.author_ids) || !publication.author_ids.length) {
+        throw new Error(`${context} author_ids: must be a non-empty array of canonical people IDs.`);
+      }
+      const authorIds = publication.author_ids.map((authorId, authorIndex) => (
+        requireKnownId(authorId, peopleIds, `${context} author_ids[${authorIndex}]`)
+      ));
+
+      if (typeof publication.award_id !== "string") {
+        throw new Error(`${context} award_id: must be an empty string or a canonical awards.json id.`);
+      }
+      if (publication.award_id) {
+        requireKnownId(publication.award_id, awardIds, `${context} award_id`);
+      }
+
+      if (typeof publication.topic !== "string") {
+        throw new Error(`${context} topic: must be an empty string or a canonical settings.json publication topic id.`);
+      }
+      if (publication.topic) {
+        requireKnownId(publication.topic, publicationTopicIds, `${context} topic`);
+      }
+
+      return {
+        ...publication,
+        publicationIndex,
+        authors: authorIds.map((id) => peopleById.get(id))
+      };
+    });
+
+    return { settings, profile, people, projects, software, publications: resolvedPublications, awards, board };
+  }
+
+  function splitList(value) {
+    if (Array.isArray(value)) {
+      return value.map((part) => String(part).trim()).filter(Boolean);
+    }
+    return String(value || "")
+      .split(";")
+      .map((part) => part.trim())
+      .filter(Boolean);
+  }
+
+  function truthy(value) {
+    return ["true", "1", "yes", "y"].includes(String(value || "").toLowerCase());
+  }
+
+  function escapeHTML(value) {
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  function pick(record, key, language) {
+    if (!record) return "";
+    return [record[`${key}_${language}`], record[key], record[`${key}_en`], record[`${key}_ko`]]
+      .find((value) => (Array.isArray(value) ? value.length > 0 : Boolean(value))) || "";
+  }
+
+  function publicationTitle(item, language = "en") {
+    return pick(item, "title", language);
+  }
+
+  function personName(person, language = "en") {
+    return person?.[`name_${language}`] || person?.name_en || person?.name_ko || person?.id || "";
+  }
+
+  function personNotesHTML(person, language = "en") {
+    const cleanNotes = (value) => Array.isArray(value)
+      ? value.map((note) => String(note).trim()).filter(Boolean)
+      : [];
+    const preferred = cleanNotes(person?.[`notes_${language}`]);
+    const fallbackLanguage = language === "ko" ? "en" : "ko";
+    const fallback = cleanNotes(person?.[`notes_${fallbackLanguage}`]);
+    const legacy = cleanNotes(person?.notes);
+    const notes = preferred.length ? preferred : fallback.length ? fallback : legacy;
+    if (!notes.length) return "";
+    return `
+      <span class="person-notes-tooltip" role="tooltip">
+        ${notes.map((note) => `<span class="person-note">${escapeHTML(note)}</span>`).join("")}
+      </span>
+    `;
+  }
+
+  function displayAuthors(people, language = "en", showNotes = true) {
+    return (people || []).map((person) => {
+      const name = escapeHTML(personName(person, language));
+      const notes = showNotes ? personNotesHTML(person, language) : "";
+      const label = person.is_self ? `<strong>${name}</strong>` : name;
+      return `<span class="publication-person"${notes ? ' tabindex="0"' : ""}>${label}${notes}</span>`;
+    }).join(", ");
+  }
+
+  function isFirstAuthor(item) {
+    return Boolean(item.authors?.[0]?.is_self);
+  }
+
+  function publicationTypeLabel(item, language) {
+    const map = {
+      en: {
+        "international-journal": "International journal",
+        "domestic-journal": "Domestic journal",
+        "international-conference": "International conference",
+        "domestic-conference": "Domestic conference"
+      },
+      ko: {
+        "international-journal": "국제학술지",
+        "domestic-journal": "국내학술지",
+        "international-conference": "국제학술대회",
+        "domestic-conference": "국내학술대회"
+      }
+    };
+    return map[language]?.[item.publication_type] || item.publication_type;
+  }
+
+  function publicationTopicLabel(item, settings, language) {
+    const topic = (settings.publication_topics || []).find((candidate) => candidate.id === item.topic);
+    return pick(topic || settings.publication_topic_fallback, "label", language);
+  }
+
+  function projectThemeLabel(item, settings, language) {
+    const theme = (settings.project_themes || []).find((candidate) => candidate.id === item.theme);
+    return pick(theme || settings.project_theme_fallback, "label", language);
+  }
+
+  function formatProjectDate(value) {
+    const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    return match ? `${match[1]}.${match[2]}.${match[3]}.` : String(value || "");
+  }
+
+  function projectPeriod(item) {
+    return [formatProjectDate(item.start_date), formatProjectDate(item.end_date)]
+      .filter(Boolean)
+      .join(" – ");
+  }
+
+  function projectNotes(item, language = "en") {
+    const primary = language === "ko" ? item.notes_kr : item.notes_en;
+    const fallback = language === "ko" ? item.notes_en : item.notes_kr;
+    const notes = Array.isArray(primary) && primary.length ? primary : fallback;
+    return (Array.isArray(notes) ? notes : [])
+      .map((note) => String(note).trim())
+      .filter(Boolean);
+  }
+
+  function softwareNotes(item, language = "en") {
+    return projectNotes(item, language);
+  }
+
+  function publicationStatus(item) {
+    if (truthy(item.under_review)) return "under review";
+    if (truthy(item.in_press)) return "in press";
+    return "";
+  }
+
+  function publicationStatusRank(item) {
+    if (truthy(item.under_review)) return 2;
+    if (truthy(item.in_press)) return 1;
+    return 0;
+  }
+
+  function publicationYear(item) {
+    return String(item.date || "").slice(0, 4);
+  }
+
+  function normalizeText(value) {
+    return String(value || "").toLocaleLowerCase().normalize("NFKD");
+  }
+
+  function publicationCitation(item, language = "en") {
+    const authorText = (item.authors || []).map((person) => personName(person, language)).join(", ");
+    const doiText = item.doi ? ` https://doi.org/${item.doi}` : "";
+    const dateLabel = publicationYear(item) || publicationStatus(item) || "n.d.";
+    return `${authorText} (${dateLabel}). ${publicationTitle(item, language)}. ${item.venue}${doiText}`.replace(/\s+/g, " ").trim();
+  }
+
+  function bibtexEscape(value) {
+    return String(value || "")
+      .replaceAll("\\", "\\textbackslash{}")
+      .replaceAll("&", "\\&")
+      .replaceAll("%", "\\%")
+      .replaceAll("#", "\\#")
+      .replaceAll("_", "\\_")
+      .replaceAll("{", "\\{")
+      .replaceAll("}", "\\}");
+  }
+
+  function publicationCitationKey(item) {
+    const source = item.doi || item.url || [
+      publicationTitle(item, "en"),
+      item.date,
+      (item.authors || []).map((person) => personName(person, "en")).join("|")
+    ].join("|");
+    let hash = 2166136261;
+    for (let index = 0; index < source.length; index += 1) {
+      hash ^= source.charCodeAt(index);
+      hash = Math.imul(hash, 16777619);
+    }
+    const year = publicationYear(item) || "nd";
+    return `publication-${year}-${(hash >>> 0).toString(36)}`;
+  }
+
+  function bibtexEntry(item) {
+    const entryType = item.publication_type.endsWith("-journal") ? "article" : "inproceedings";
+    const dateLabel = publicationYear(item) || publicationStatus(item) || "n.d.";
+    const fields = [
+      `  title = {${bibtexEscape(publicationTitle(item, "en"))}}`,
+      `  author = {${(item.authors || []).map((person) => bibtexEscape(personName(person, "en"))).join(" and ")}}`,
+      `  year = {${dateLabel}}`
+    ];
+    if (entryType === "article") {
+      fields.push(`  journal = {${bibtexEscape(item.venue)}}`);
+    } else {
+      fields.push(`  booktitle = {${bibtexEscape(item.venue)}}`);
+    }
+    if (item.doi) fields.push(`  doi = {${item.doi}}`);
+    if (item.url) fields.push(`  url = {${item.url}}`);
+    return `@${entryType}{${publicationCitationKey(item)},\n${fields.join(",\n")}\n}`;
+  }
+
+  function download(filename, content, mimeType) {
+    const blob = new Blob([content], { type: mimeType || "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  function downloadPublicationBib(item) {
+    download(`${publicationCitationKey(item)}.bib`, `${bibtexEntry(item)}\n`, "application/x-bibtex;charset=utf-8");
+  }
+
+  function safeExternalURL(value) {
+    try {
+      const url = new URL(value);
+      return ["http:", "https:", "mailto:"].includes(url.protocol) ? url.href : "";
+    } catch {
+      return "";
+    }
+  }
+
+  function softwareLinkInfo(value, language = "en") {
+    const source = typeof value === "object" && value ? value.url : value;
+    let url;
+    try {
+      url = new URL(String(source || "").trim());
+    } catch {
+      return null;
+    }
+    if (!['http:', 'https:'].includes(url.protocol)) return null;
+
+    const host = url.hostname.toLowerCase().replace(/^www\./, "");
+    const path = url.pathname.toLowerCase();
+    const matches = (domain) => host === domain || host.endsWith(`.${domain}`);
+    let platform = "webpage";
+    let labelEn = "Webpage";
+    let labelKo = "웹페이지";
+    let icon = "webpage";
+
+    if (matches("github.com")) {
+      [platform, labelEn, labelKo, icon] = ["github", "GitHub", "GitHub", "github"];
+    } else if (matches("gitlab.com")) {
+      [platform, labelEn, labelKo, icon] = ["gitlab", "GitLab", "GitLab", "repository"];
+    } else if (matches("bitbucket.org")) {
+      [platform, labelEn, labelKo, icon] = ["bitbucket", "Bitbucket", "Bitbucket", "repository"];
+    } else if (matches("codeberg.org")) {
+      [platform, labelEn, labelKo, icon] = ["codeberg", "Codeberg", "Codeberg", "repository"];
+    } else if (matches("sourceforge.net")) {
+      [platform, labelEn, labelKo, icon] = ["sourceforge", "SourceForge", "SourceForge", "repository"];
+    } else if (matches("pypi.org")) {
+      [platform, labelEn, labelKo, icon] = ["pypi", "PyPI", "PyPI", "package"];
+    } else if (matches("npmjs.com")) {
+      [platform, labelEn, labelKo, icon] = ["npm", "npm", "npm", "package"];
+    } else if (matches("jsr.io")) {
+      [platform, labelEn, labelKo, icon] = ["jsr", "JSR", "JSR", "package"];
+    } else if (matches("crates.io")) {
+      [platform, labelEn, labelKo, icon] = ["crates", "crates.io", "crates.io", "package"];
+    } else if (matches("nuget.org")) {
+      [platform, labelEn, labelKo, icon] = ["nuget", "NuGet", "NuGet", "package"];
+    } else if (["central.sonatype.com", "search.maven.org", "repo1.maven.org", "mvnrepository.com"].some(matches)) {
+      [platform, labelEn, labelKo, icon] = ["maven", "Maven Central", "Maven Central", "package"];
+    } else if (matches("hub.docker.com")) {
+      [platform, labelEn, labelKo, icon] = ["docker", "Docker Hub", "Docker Hub", "container"];
+    } else if (matches("anaconda.org")) {
+      [platform, labelEn, labelKo, icon] = ["anaconda", "Anaconda", "Anaconda", "package"];
+    } else if (matches("rubygems.org")) {
+      [platform, labelEn, labelKo, icon] = ["rubygems", "RubyGems", "RubyGems", "package"];
+    } else if (matches("packagist.org")) {
+      [platform, labelEn, labelKo, icon] = ["packagist", "Packagist", "Packagist", "package"];
+    } else if (matches("pub.dev")) {
+      [platform, labelEn, labelKo, icon] = ["pub", "pub.dev", "pub.dev", "package"];
+    } else if (matches("hex.pm")) {
+      [platform, labelEn, labelKo, icon] = ["hex", "Hex", "Hex", "package"];
+    } else if (matches("metacpan.org") || matches("cpan.org")) {
+      [platform, labelEn, labelKo, icon] = ["cpan", "CPAN", "CPAN", "package"];
+    } else if (matches("cran.r-project.org")) {
+      [platform, labelEn, labelKo, icon] = ["cran", "CRAN", "CRAN", "package"];
+    } else if (matches("bioconductor.org")) {
+      [platform, labelEn, labelKo, icon] = ["bioconductor", "Bioconductor", "Bioconductor", "package"];
+    } else if (matches("huggingface.co")) {
+      [platform, labelEn, labelKo, icon] = ["huggingface", "Hugging Face", "Hugging Face", "package"];
+    } else if (matches("pkg.go.dev")) {
+      [platform, labelEn, labelKo, icon] = ["go-package", "Go package", "Go 패키지", "package"];
+    } else if (matches("quay.io")) {
+      [platform, labelEn, labelKo, icon] = ["quay", "Quay", "Quay", "container"];
+    } else if (matches("flathub.org")) {
+      [platform, labelEn, labelKo, icon] = ["flathub", "Flathub", "Flathub", "package"];
+    } else if (matches("snapcraft.io")) {
+      [platform, labelEn, labelKo, icon] = ["snapcraft", "Snap Store", "Snap Store", "package"];
+    } else if (matches("formulae.brew.sh")) {
+      [platform, labelEn, labelKo, icon] = ["homebrew", "Homebrew", "Homebrew", "package"];
+    } else if (matches("zenodo.org") || (matches("doi.org") && path.includes("zenodo."))) {
+      [platform, labelEn, labelKo, icon] = ["zenodo", "Zenodo", "Zenodo", "archive"];
+    } else if (matches("figshare.com")) {
+      [platform, labelEn, labelKo, icon] = ["figshare", "Figshare", "Figshare", "archive"];
+    } else if (matches("osf.io")) {
+      [platform, labelEn, labelKo, icon] = ["osf", "OSF", "OSF", "archive"];
+    } else if (matches("softwareheritage.org")) {
+      [platform, labelEn, labelKo, icon] = ["software-heritage", "Software Heritage", "Software Heritage", "archive"];
+    } else if (matches("doi.org")) {
+      [platform, labelEn, labelKo, icon] = ["doi", "DOI", "DOI", "archive"];
+    }
+
+    const customLabel = typeof value === "object" && value
+      ? value[`label_${language}`] || value.label || ""
+      : "";
+    return {
+      url: url.href,
+      platform,
+      icon,
+      label: customLabel || (language === "ko" ? labelKo : labelEn)
+    };
+  }
+
+  function softwareLinks(item, language = "en") {
+    return (Array.isArray(item?.links) ? item.links : [])
+      .map((value) => softwareLinkInfo(value, language))
+      .filter(Boolean);
+  }
+
+  function contentMediaPath(value) {
+    const source = typeof value === "object" && value ? value.src : value;
+    const relative = String(source || "").trim().replaceAll("\\", "/").replace(/^\/+/, "");
+    if (!relative || relative.split("/").some((part) => !part || part === "." || part === "..")) return "";
+    return `data/media/${relative}`;
+  }
+
+  function contentMediaType(value) {
+    if (typeof value === "object" && value?.type === "video") return "video";
+    if (typeof value === "object" && value?.type === "image") return "image";
+    const source = typeof value === "object" && value ? value.src : value;
+    const extension = String(source || "").split(/[?#]/, 1)[0].split(".").pop().toLowerCase();
+    return ["mp4", "webm", "ogv", "ogg", "mov", "m4v"].includes(extension) ? "video" : "image";
+  }
+
+  window.SiteData = Object.freeze({
+    FILES,
+    loadAll,
+    splitList,
+    truthy,
+    escapeHTML,
+    pick,
+    publicationTitle,
+    personName,
+    personNotesHTML,
+    displayAuthors,
+    isFirstAuthor,
+    publicationTypeLabel,
+    publicationTopicLabel,
+    projectThemeLabel,
+    projectPeriod,
+    projectNotes,
+    softwareNotes,
+    publicationStatus,
+    publicationStatusRank,
+    publicationYear,
+    normalizeText,
+    publicationCitation,
+    publicationCitationKey,
+    bibtexEntry,
+    download,
+    downloadPublicationBib,
+    safeExternalURL,
+    softwareLinkInfo,
+    softwareLinks,
+    contentMediaPath,
+    contentMediaType
+  });
+}());

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile-Editor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <h1 class="app-title">Profile-Editor</h1>
+
+      <nav class="tabs" role="tablist" aria-label="데이터 편집 영역">
+        <button class="tab" id="tab-profile" type="button" role="tab" aria-controls="panel-profile" aria-selected="true" tabindex="0" data-panel="profile">프로필</button>
+        <button class="tab" id="tab-publications" type="button" role="tab" aria-controls="panel-publications" aria-selected="false" tabindex="-1" data-panel="publications">논문</button>
+        <button class="tab" id="tab-projects" type="button" role="tab" aria-controls="panel-projects" aria-selected="false" tabindex="-1" data-panel="projects">프로젝트</button>
+        <button class="tab" id="tab-software" type="button" role="tab" aria-controls="panel-software" aria-selected="false" tabindex="-1" data-panel="software">소프트웨어</button>
+        <button class="tab" id="tab-board" type="button" role="tab" aria-controls="panel-board" aria-selected="false" tabindex="-1" data-panel="board">게시판</button>
+      </nav>
+
+      <div class="save-bar">
+        <output id="save-status" class="save-status" role="status" aria-live="polite">데이터를 불러오는 중…</output>
+        <button id="discard-button" class="button button-secondary" type="button" disabled>변경 취소</button>
+        <button id="save-button" class="button button-primary" type="button" disabled>저장</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <div id="load-error" class="load-error" role="alert" hidden>
+        <strong>데이터를 불러오지 못했습니다.</strong>
+        <span id="load-error-message"></span>
+        <button id="retry-button" class="button button-secondary" type="button">다시 시도</button>
+      </div>
+
+      <div id="save-error" class="save-error" role="alert" hidden>
+        <strong>저장하지 못했습니다.</strong>
+        <span id="save-error-message"></span>
+      </div>
+
+      <section id="panel-profile" class="workspace-panel" role="tabpanel" aria-labelledby="tab-profile" data-panel-name="profile">
+        <div class="panel-heading">
+          <h2>프로필</h2>
+        </div>
+
+        <article class="settings-card">
+          <div class="card-heading">
+            <h3>메인 페이지 섹션</h3>
+          </div>
+
+          <div class="section-columns">
+            <section class="section-column" data-section-zone="visible" aria-labelledby="visible-section-title">
+              <div class="column-heading">
+                <h4 id="visible-section-title">노출</h4>
+                <span id="visible-section-count" class="count-chip">0</span>
+              </div>
+              <ol id="visible-section-list" class="sortable-list" aria-label="노출할 프로필 섹션"></ol>
+            </section>
+
+            <section class="section-column section-column-hidden" data-section-zone="hidden" aria-labelledby="hidden-section-title">
+              <div class="column-heading">
+                <h4 id="hidden-section-title">숨김</h4>
+                <span id="hidden-section-count" class="count-chip">0</span>
+              </div>
+              <ol id="hidden-section-list" class="sortable-list" aria-label="숨길 프로필 섹션"></ol>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <section id="panel-publications" class="workspace-panel" role="tabpanel" aria-labelledby="tab-publications" data-panel-name="publications" hidden>
+        <div class="panel-heading">
+          <h2>논문</h2>
+        </div>
+
+        <article class="settings-card">
+          <div class="card-heading">
+            <h3>Publication topics</h3>
+            <button class="button button-secondary" type="button" data-add-taxonomy="publicationTopics" data-editor-control>주제 추가</button>
+          </div>
+          <div class="taxonomy-header" aria-hidden="true">
+            <span></span><span>English label</span><span>국문 이름</span><span>사용</span><span></span>
+          </div>
+          <ol id="publication-topic-list" class="taxonomy-list" data-taxonomy-zone="publicationTopics"></ol>
+          <div id="publication-topic-fallback" class="fallback-row"></div>
+        </article>
+      </section>
+
+      <section id="panel-projects" class="workspace-panel" role="tabpanel" aria-labelledby="tab-projects" data-panel-name="projects" hidden>
+        <div class="panel-heading">
+          <h2>프로젝트</h2>
+          <div class="panel-heading-actions">
+            <button id="add-project-button" class="button button-primary" type="button" data-editor-control>새 프로젝트</button>
+          </div>
+        </div>
+
+        <article class="settings-card board-card content-card">
+          <div class="board-layout">
+            <section class="board-list-column" aria-labelledby="project-list-title">
+              <div class="column-heading board-list-heading">
+                <h3 id="project-list-title">프로젝트</h3>
+                <span id="project-item-count" class="count-chip">0</span>
+              </div>
+              <ol id="project-item-list" class="board-item-list content-item-list" data-empty-label="프로젝트가 없습니다" aria-label="프로젝트 표시 순서"></ol>
+            </section>
+
+            <section class="board-editor" aria-label="프로젝트 편집">
+              <div id="project-editor-placeholder" class="board-editor-placeholder">
+                <h3>프로젝트 선택</h3>
+              </div>
+              <div id="project-form" hidden></div>
+            </section>
+          </div>
+        </article>
+
+        <article class="settings-card content-settings-card">
+          <div class="card-heading">
+            <h3>Project themes</h3>
+            <button class="button button-secondary" type="button" data-add-taxonomy="projectThemes" data-editor-control>테마 추가</button>
+          </div>
+          <div class="taxonomy-header" aria-hidden="true">
+            <span></span><span>English label</span><span>국문 이름</span><span>사용</span><span></span>
+          </div>
+          <ol id="project-theme-list" class="taxonomy-list" data-taxonomy-zone="projectThemes"></ol>
+          <div id="project-theme-fallback" class="fallback-row"></div>
+        </article>
+      </section>
+
+      <section id="panel-software" class="workspace-panel" role="tabpanel" aria-labelledby="tab-software" data-panel-name="software" hidden>
+        <div class="panel-heading">
+          <h2>소프트웨어</h2>
+          <div class="panel-heading-actions">
+            <button id="add-software-button" class="button button-primary" type="button" data-editor-control>새 소프트웨어</button>
+          </div>
+        </div>
+
+        <article class="settings-card board-card content-card">
+          <div class="board-layout">
+            <section class="board-list-column" aria-labelledby="software-list-title">
+              <div class="column-heading board-list-heading">
+                <h3 id="software-list-title">소프트웨어</h3>
+                <span id="software-item-count" class="count-chip">0</span>
+              </div>
+              <ol id="software-item-list" class="board-item-list content-item-list" data-empty-label="소프트웨어가 없습니다" aria-label="소프트웨어 표시 순서"></ol>
+            </section>
+
+            <section class="board-editor" aria-label="소프트웨어 편집">
+              <div id="software-editor-placeholder" class="board-editor-placeholder">
+                <h3>소프트웨어 선택</h3>
+              </div>
+              <div id="software-form" hidden></div>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <section id="panel-board" class="workspace-panel" role="tabpanel" aria-labelledby="tab-board" data-panel-name="board" hidden>
+        <div class="panel-heading">
+          <h2>게시판</h2>
+          <div class="panel-heading-actions">
+            <button id="add-board-button" class="button button-primary" type="button" data-editor-control>새 게시글</button>
+          </div>
+        </div>
+
+        <article class="settings-card board-card">
+          <div class="board-layout">
+            <section class="board-list-column" aria-labelledby="board-list-title">
+              <div class="column-heading board-list-heading">
+                <h3 id="board-list-title">게시글</h3>
+                <span id="board-item-count" class="count-chip">0</span>
+              </div>
+              <ol id="board-item-list" class="board-item-list" aria-label="날짜순 게시글"></ol>
+            </section>
+
+            <section id="board-editor" class="board-editor" aria-label="게시글 편집">
+              <div id="board-editor-placeholder" class="board-editor-placeholder">
+                <h3 id="board-editor-title">게시글 선택</h3>
+              </div>
+              <div id="board-form" hidden></div>
+            </section>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div id="move-announcer" class="sr-only" aria-live="polite"></div>
+</body>
+</html>
