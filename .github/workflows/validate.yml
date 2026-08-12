@@ -1,0 +1,35 @@
+name: Validate website data
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate and regenerate exports
+        shell: pwsh
+        run: python app/tools/build.py
+      - name: Check static references
+        shell: pwsh
+        run: python app/tools/check_site.py
+      - name: Check JavaScript syntax
+        shell: pwsh
+        run: |
+          node --check app/assets/js/data.js
+          node --check app/assets/js/app.js
+          node --check app/assets/js/cv.js
+      - name: Ensure generated files are current
+        shell: pwsh
+        run: git diff --exit-code -- app/generated/

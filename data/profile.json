@@ -1,0 +1,214 @@
+{
+  "certifications": [
+    {
+      "date": "2023-12-08",
+      "issuer_en": "Korea Energy Agency",
+      "issuer_ko": "한국에너지공단",
+      "name_en": "Building Energy Assessor",
+      "name_ko": "건축물에너지평가사",
+      "visible_in_CV": true
+    },
+    {
+      "date": "2023-06-09",
+      "issuer_en": "Human Resources Development Service of Korea",
+      "issuer_ko": "한국산업인력공단",
+      "name_en": "Engineer HVAC and Refrigerating Machinery",
+      "name_ko": "공조냉동기계기사",
+      "visible_in_CV": true
+    },
+    {
+      "date": "2021-12-24",
+      "issuer_en": "Human Resources Development Service of Korea",
+      "issuer_ko": "한국산업인력공단",
+      "name_en": "Craftsman Bartender",
+      "name_ko": "조주기능사",
+      "visible_in_CV": true
+    },
+    {
+      "date": "2020-05-29",
+      "issuer_en": "The Korea Chamber of Commerce and Industry",
+      "issuer_ko": "대한상공회의소",
+      "name_en": "Secretarial Administrator, Level I",
+      "name_ko": "비서 1급",
+      "visible_in_CV": true
+    },
+    {
+      "date": "2020-04-24",
+      "issuer_en": "The Korea Chamber of Commerce and Industry",
+      "issuer_ko": "대한상공회의소",
+      "name_en": "Computer Specialist in Spreadsheet \u0026 Database, Level I",
+      "name_ko": "컴퓨터활용능력 1급",
+      "visible_in_CV": true
+    },
+    {
+      "date": "2019-12-20",
+      "issuer_en": "Human Resources Development Service of Korea",
+      "issuer_ko": "한국산업인력공단",
+      "name_en": "Engineer Architecture",
+      "name_ko": "건축기사",
+      "visible_in_CV": true
+    }
+  ],
+  "contact": {
+    "email": "hyeonggon.jo@snu.ac.kr",
+    "github": "https://github.com/Gonie-Gonie",
+    "orcid": "https://orcid.org/0009-0004-8821-275X",
+    "scholar": "https://scholar.google.co.kr/citations?user=lqUvlaYAAAAJ\u0026hl=ko",
+    "linkedin": "https://www.linkedin.com/in/hyeong-gon-jo/"
+  },
+  "education": [
+    {
+      "advisor_en": "Advisor: Prof. Cheol-Soo Park",
+      "advisor_ko": "지도교수: 박철수 교수님",
+      "degree_en": "Ph.D. in Architecture and Architectural Engineering",
+      "degree_ko": "건축학과 공학박사",
+      "institution_en": "Seoul National University",
+      "institution_ko": "서울대학교",
+      "period": "2022.03.–2026.02.",
+      "thesis_en": "Simplification Methods for Dynamic Simulation Tools to Support Design-Stage Decision-Making",
+      "thesis_ko": "설계단계 의사결정 지원을 위한 동적 시뮬레이션 도구 단순화 방법",
+      "visible_in_CV": true
+    },
+    {
+      "advisor_en": "Advisor: Prof. Cheol-Soo Park",
+      "advisor_ko": "지도교수: 박철수 교수님",
+      "degree_en": "M.S. in Architecture and Architectural Engineering",
+      "degree_ko": "건축학과 공학석사",
+      "institution_en": "Seoul National University",
+      "institution_ko": "서울대학교",
+      "period": "2020.03.–2022.02.",
+      "thesis_en": "Stochastic Daylight Model and Electric Lighting Control",
+      "thesis_ko": "확률론적 주광 모델 및 전기조명 제어",
+      "visible_in_CV": true
+    },
+    {
+      "advisor_en": "",
+      "advisor_ko": "",
+      "degree_en": "B.S. in Architecture and Architectural Engineering",
+      "degree_ko": "건축학과 공학사",
+      "institution_en": "Seoul National University",
+      "institution_ko": "서울대학교",
+      "period": "2016.03.–2020.02.",
+      "thesis_en": "",
+      "thesis_ko": "",
+      "visible_in_CV": true
+    }
+  ],
+  "experience": [
+    {
+      "institution_en": "Seoul National University R\u0026DB Foundation",
+      "institution_ko": "서울대학교 산학협력단",
+      "period_en": "2026.05–Present",
+      "period_ko": "2026.05–현재",
+      "title_en": "Postdoctoral Researcher",
+      "title_ko": "연수연구원",
+      "visible_in_CV": true
+    }
+  ],
+  "identity": {
+    "affiliation_en": "Building Simulation Lab, Seoul National University",
+    "affiliation_ko": "서울대학교 건축에너지연구실",
+    "location_en": "Building 39, Room 418, Seoul National University, 1 Gwanak-ro, Gwanak-gu, Seoul",
+    "location_ko": "서울대학교 39동 418호, 서울특별시 관악구 관악로 1",
+    "name_en": "Hyeong-Gon Jo",
+    "name_ko": "조형곤",
+    "role_en": "Building energy researcher · domain-expert developer",
+    "role_ko": "건물에너지 연구자 · 연구 소프트웨어 개발자"
+  },
+  "intro": {
+    "short_en": "I conduct research on building energy performance assessment, building simulation methodologies, and HVAC system modeling and control. I also develop software tools designed to support the building energy ecosystem.",
+    "short_ko": "건물에너지 성능평가, 시뮬레이션 방법론, HVAC 시스템 모델링 및 제어 방법론을 연구합니다. 건물 에너지 생태계에 도움을 줄 수 있는 소프트웨어를 개발합니다."
+  },
+  "profile_card": {
+    "credentials": [
+      {
+        "name_en": "Ph.D. in Engineering",
+        "name_ko": "공학박사"
+      },
+      {
+        "name_en": "Building Energy Assessor",
+        "name_ko": "건축물에너지평가사"
+      }
+    ],
+    "media": {
+      "src": "profile.jpg",
+      "type": "image"
+    },
+    "title_en": "Postdoctoral Associate",
+    "title_ko": "박사후연구원"
+  },
+  "schema_version": 1,
+  "scholarships": [
+    {
+      "amount": {
+        "value": 13911000,
+        "currency": "KRW"
+      },
+      "name_en": "Hanssem deView Scholarship (now Taejae Student Research Scholarship)",
+      "name_ko": "한샘드뷰장학금 (現 태재학생연구장학금)",
+      "period_en": "2020–2021",
+      "period_ko": "2020–2021",
+      "summary_en": "Selected research topics related to future cities and housing, followed by six months of research and a presentation. Research topic (2020): Automated building design using C-GAN artificial intelligence to achieve target energy consumption. Research topic (2021): AI-based design-automation process for maintaining a comfortable indoor lighting environment.",
+      "summary_ko": "미래도시 및 미래주거 관련 연구주제 선정, 6개월간 연구 후 발표. 연구주제 (2020): C-GAN 인공지능을 이용한 목표 에너지 소비량 달성 건축물 자동설계. 연구주제 (2021): 쾌적한 실내 빛환경 유지를 위한 인공지능 기반 설계 자동화 프로세스 개발.",
+      "visible_in_CV": true
+    },
+    {
+      "amount": {
+        "value": 56480000,
+        "currency": "KRW"
+      },
+      "name_en": "BrainKorea21 Four",
+      "name_ko": "4단계BK21장학금",
+      "period_en": "2022–2025",
+      "period_ko": "2022–2025",
+      "summary_en": "",
+      "summary_ko": "",
+      "visible_in_CV": true
+    }
+  ],
+  "skills": [
+    {
+      "detail_en": "Building and HVAC simulation, data analysis, machine learning, and modular software development",
+      "detail_ko": "건물/HVAC 시뮬레이션, 데이터 분석, 기계학습, 외부 GUI 연동 모듈 개발",
+      "name": "Python",
+      "visible_in_CV": true
+    },
+    {
+      "detail_en": "Data analysis, machine learning, and plotting",
+      "detail_ko": "데이터 분석, 기계학습, 그래프 작도",
+      "name": "MATLAB",
+      "visible_in_CV": true
+    },
+    {
+      "detail_en": "Building energy modeling and simulation",
+      "detail_ko": "건물 에너지 모델링 및 시뮬레이션",
+      "name": "EnergyPlus",
+      "visible_in_CV": true
+    },
+    {
+      "detail_en": "Full-stack tool development with end-to-end AI assistance",
+      "detail_ko": "front-end 및 back-end를 포함하는 도구 개발 (AI 100% 활용)",
+      "name": "Rust / Go / C# / JavaScript / CSS / HTML",
+      "visible_in_CV": true
+    },
+    {
+      "detail_en": "Parametric 3D modeling and EnergyPlus integration",
+      "detail_ko": "파라메트릭 3D 모델링, EnergyPlus 연동",
+      "name": "Rhino / Grasshopper / ClimateStudio",
+      "visible_in_CV": true
+    },
+    {
+      "detail_en": "Document automation",
+      "detail_ko": "문서 자동화",
+      "name": "Latex",
+      "visible_in_CV": true
+    },
+    {
+      "detail_en": "Development project management and collaboration",
+      "detail_ko": "개발 프로젝트 관리, 협업",
+      "name": "Git / GitHub",
+      "visible_in_CV": true
+    }
+  ],
+  "teaching": []
+}
