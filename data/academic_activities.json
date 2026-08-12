@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "editorial_service": [
+  ],
+  "professional_service": [
+  ],
+  "conference_service": [
+  ],
+  "invited_talks": [
+  ],
+  "reviews": [
+    {
+      "journal_en": "Journal of Building Performance Simulation",
+      "journal_ko": "",
+      "completed_dates": [
+        "2023-05-30",
+        "2024-07-03"
+      ],
+      "visible_in_CV": true
+    },
+    {
+      "journal_en": "Energy and Buildings",
+      "journal_ko": "",
+      "completed_dates": [
+        "2026-02-18"
+      ],
+      "visible_in_CV": true
+    },
+    {
+      "journal_en": "Energy Efficiency",
+      "journal_ko": "",
+      "completed_dates": [
+        "2026-01-12"
+      ],
+      "visible_in_CV": true
+    }
+  ]
+}
