@@ -1,0 +1,19 @@
+{
+  "data_version": "1.0.0",
+  "counts": {
+    "projects": 13,
+    "software": 9,
+    "publications": 73,
+    "people": 32,
+    "awards": 11,
+    "board": 11,
+    "academic_activities": 5,
+    "patents": 1
+  },
+  "publication_types": {
+    "domestic-conference": 42,
+    "domestic-journal": 2,
+    "international-conference": 16,
+    "international-journal": 13
+  }
+}

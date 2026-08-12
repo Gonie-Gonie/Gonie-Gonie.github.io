@@ -1,0 +1,10 @@
+{
+  "version": "1.2.1",
+  "date": "2026-11-28",
+  "notes": "app/releases/1.2.1.md",
+  "data_version": "1.0.0",
+  "upstream": {
+    "repository": "Gonie-Gonie/Gonie-Gonie.github.io",
+    "ref": "main"
+  }
+}
